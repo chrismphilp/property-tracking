@@ -13,11 +13,11 @@ class RightmovePropertiesForSale:
                  max_price: int = 10_000_000,
                  radius_from_location: int = 0,
                  property_type: [str] = 'houses',
-                 include_sstc: bool = False):
+                 include_sstc: bool = True):
         self.base_url = 'https://www.rightmove.co.uk/property-for-sale/find.html'
         self.location_identifier = location_identifier
-        self.min_price = min_price
         self.max_price = max_price
+        self.min_price = min_price
         self.radius_from_location = radius_from_location
         self.property_type = property_type
         self.include_sstc = include_sstc
@@ -45,6 +45,7 @@ class RightmovePropertiesForSale:
 
     def _request(self, index):
         self.url = self.create_url(index)
+        print(self.url)
         r = requests.get(self.url)
         if r.status_code != 200:
             raise ValueError('Cannot make request to rightmove.co.uk')
@@ -79,6 +80,14 @@ class RightmovePropertiesForSale:
         results.loc[results["type"].str.contains("studio", case=False), "number_bedrooms"] = 0
         results["number_bedrooms"] = pd.to_numeric(results["number_bedrooms"])
 
+        # Extract the date the property was added on to rightmove
+        date_added_regex = r"\b([0-9]{1,2}\/[0-9]{1,2}\/[0-9]{1,4})\b"
+        today = dt.datetime.now().strftime("%d/%m/%Y")
+        yesterday = (dt.datetime.today() - dt.timedelta(days=1)).strftime("%d/%m/%Y")
+        results["added_on"] = results["added_on"].str.replace('today', today)
+        results["added_on"] = results["added_on"].str.replace('yesterday', yesterday)
+        results["added_on"] = results["added_on"].astype(str).str.extract(date_added_regex, expand=True)
+
         # Clean up annoying white spaces and newlines in `type` column:
         results["type"] = results["type"].str.strip("\n").str.strip()
 
@@ -86,8 +95,12 @@ class RightmovePropertiesForSale:
             return results
         else:
             current_csv = pd.concat([current_csv, results])
-            current_csv.drop_duplicates(subset=current_csv.columns.difference(['search_datetime']), keep="first", inplace=True)
+            current_csv["search_datetime"] = current_csv["search_datetime"].astype('str')
+            current_csv["added_on"] = current_csv["added_on"].astype('str')
+            current_csv.drop_duplicates(subset=current_csv.columns.difference(["search_datetime", "added_on"]), keep="first", inplace=True)
 
+        current_csv['added_on'] = pd.to_datetime(current_csv['added_on'], dayfirst=True)
+        current_csv.sort_values("added_on", ascending=False, inplace=True)
         return current_csv
 
     def process_page(self):
@@ -100,19 +113,21 @@ class RightmovePropertiesForSale:
         xp_prices = """//div[@class="propertyCard-priceValue"]/text()"""
         xp_addresses = """//address[@class="propertyCard-address"]//span/text()"""
         xp_weblinks = """//div[@class="propertyCard-details"]//a[@class="propertyCard-link"]/@href"""
+        xp_added_on = """//div[@class="propertyCard-detailsFooter"]//span[@class="propertyCard-branchSummary-addedOrReduced"]/text()"""
 
         # Create data lists from xpaths:
         price_pcm = tree.xpath(xp_prices)
         titles = tree.xpath(xp_titles)
         addresses = tree.xpath(xp_addresses)
         weblinks = [f"{base}{tree.xpath(xp_weblinks)[w]}" for w in range(len(tree.xpath(xp_weblinks)))]
+        added_on = tree.xpath(xp_added_on)
 
-        data = [price_pcm, titles, addresses, weblinks]
+        data = [price_pcm, titles, addresses, weblinks, added_on]
         return self.create_data_frame(data)
 
     @staticmethod
     def create_data_frame(data: [str]):
-        columns = ["price", "type", "address", "url"]
+        columns = ["price", "type", "address", "url", "added_on"]
 
         temp_df = pd.DataFrame(data)
         temp_df = temp_df.transpose()
