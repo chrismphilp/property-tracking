@@ -9,3 +9,6 @@ RightmovePropertiesForSale(location_identifier='REGION^79781', radius_from_locat
 
 # Zoopla Properties
 ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, include_sstc=False)  # barnet
+ZooplaPropertiesForSale(location_identifier='london/northwood', radius_from_location=1, include_sstc=False)  # northwood
+ZooplaPropertiesForSale(location_identifier='ruislip', radius_from_location=1, include_sstc=False)  # ruislip
+ZooplaPropertiesForSale(location_identifier='harrow-on-the-hill', radius_from_location=1, include_sstc=False)  # harrow-on-the-hill

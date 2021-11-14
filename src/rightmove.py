@@ -28,7 +28,7 @@ class RightmovePropertiesForSale:
         self.current_page = self._request(0)
 
         try:
-            current_csv = pd.read_csv('rightmove-houses.csv')
+            current_csv = pd.read_csv('../rightmove-houses.csv')
         except:
             current_csv = None
 
