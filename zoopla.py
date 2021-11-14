@@ -2,49 +2,55 @@ import datetime as dt
 import urllib.parse
 import requests
 import math
+import re
 from lxml import html
 import pandas as pd
 
 from parse import Parser
 
 
-class RightmovePropertiesForSale:
+class ZooplaPropertiesForSale:
 
     def __init__(self, location_identifier: str,
                  min_price: int = 250_000,
                  max_price: int = 475_000,
-                 radius_from_location: float = 0,
+                 page_size: int = 25,
+                 radius_from_location: int = 0,
                  property_type: [str] = 'houses',
-                 include_sstc: bool = True):
+                 include_sstc: bool = True, ):
         self.parser = Parser()
-        self.base_url = 'https://www.rightmove.co.uk/property-for-sale/find.html'
+        self.base_url = 'https://www.zoopla.co.uk/for-sale'
         self.location_identifier = location_identifier
         self.min_price = min_price
         self.max_price = max_price
+        self.page_size = page_size
         self.radius_from_location = radius_from_location
         self.property_type = property_type
         self.include_sstc = include_sstc
 
-        self.current_page = self._request(0)
+        self.current_page = self._request(1)
 
         try:
-            current_csv = pd.read_csv('rightmove-houses.csv')
+            current_csv = pd.read_csv('zoopla-houses.csv')
         except:
             current_csv = None
 
-        self.process_results(current_csv).to_csv('rightmove-houses.csv', index=False)
+        self.process_results(current_csv).to_csv('zoopla-houses.csv', index=False)
 
-    def create_url(self, index: int = 0):
+    def create_url(self, index: int = 2):
         url_vars = {
-            "index": index,
-            "locationIdentifier": self.location_identifier,
-            "minPrice": self.min_price,
-            "maxPrice": self.max_price,
+            "include_sold": str(self.include_sstc).lower(),
+            "is_auction": "false",
+            "is_shared_ownership": "false",
+            "view_type": "list",
+            "page_size": self.page_size,
+            "price_max": self.max_price,
+            "price_min": self.min_price,
             "radius": self.radius_from_location,
-            "primaryDisplayPropertyType": self.property_type,
-            "includeSSTC": self.include_sstc,
+            "pn": index,
         }
-        return "{}?{}".format(self.base_url, urllib.parse.urlencode(url_vars))
+        return "{}/{}/{}/?{}".format(self.base_url, self.property_type, self.location_identifier,
+                                     urllib.parse.urlencode(url_vars))
 
     def _request(self, index):
         self.url = self.create_url(index)
@@ -57,16 +63,17 @@ class RightmovePropertiesForSale:
     @property
     def number_of_pages(self):
         tree = html.fromstring(self.current_page)
-        xpath = """//span[@class="searchHeader-resultCount"]/text()"""
-        return math.ceil(int(tree.xpath(xpath)[0].replace(",", "")) / 24)
+        xpath = """//main[@data-testid="search-content"]
+        //p[@data-testid="total-results"]/text()"""
+        pattern = re.compile(r"""[0-9]+""", re.VERBOSE)
+        pages = pattern.findall(str(tree.xpath(xpath)))[0]
+        return math.ceil(int(pages) / self.page_size)
 
     def process_results(self, current_csv):
         results = self.process_page()
 
         for p in range(1, self.number_of_pages, 1):
-            current_index = p * 24
-
-            self.current_page = self._request(current_index)
+            self.current_page = self._request(p + 1)
             results = pd.concat([results, self.process_page()])
 
         results["price"].replace(regex=True, inplace=True, to_replace=r"\D", value=r"")
@@ -84,11 +91,7 @@ class RightmovePropertiesForSale:
         results["number_bedrooms"] = pd.to_numeric(results["number_bedrooms"])
 
         # Extract the date the property was added on to rightmove
-        date_added_regex = r"\b([0-9]{1,2}\/[0-9]{1,2}\/[0-9]{1,4})\b"
-        today = dt.datetime.now().strftime("%d/%m/%Y")
-        yesterday = (dt.datetime.today() - dt.timedelta(days=1)).strftime("%d/%m/%Y")
-        results["added_on"] = results["added_on"].str.replace('today', today)
-        results["added_on"] = results["added_on"].str.replace('yesterday', yesterday)
+        date_added_regex = r"\b([0-9]{1,2}th [A-Z][a-z]{1,3} [0-9]{1,4})\b"
         results["added_on"] = results["added_on"].astype(str).str.extract(date_added_regex, expand=True)
 
         # Clean up annoying white spaces and newlines in `type` column:
@@ -110,14 +113,18 @@ class RightmovePropertiesForSale:
     def process_page(self):
         tree = html.fromstring(self.current_page)
 
-        base = "https://www.rightmove.co.uk"
-        xp_titles = """//div[@class="propertyCard-details"]\
-                //a[@class="propertyCard-link"]\
-                //h2[@class="propertyCard-title"]/text()"""
-        xp_prices = """//div[@class="propertyCard-priceValue"]/text()"""
-        xp_addresses = """//address[@class="propertyCard-address"]//span/text()"""
-        xp_weblinks = """//div[@class="propertyCard-details"]//a[@class="propertyCard-link"]/@href"""
-        xp_added_on = """//div[@class="propertyCard-detailsFooter"]//span[@class="propertyCard-branchSummary-addedOrReduced"]/text()"""
+        base = "https://www.zoopla.co.uk"
+        xp_titles = """//div[@data-testid="search-result"]
+        //h2[@data-testid="listing-title"]/text()"""
+        xp_prices = """//div[@data-testid="search-result"]
+        //div[contains(@class, 'css-qmlb99-CardHeader')]
+        //p[contains(@class, 'css-1o565rw-Text')]/text()"""
+        xp_addresses = """//div[@data-testid="search-result"]
+        //p[@data-testid="listing-description"]/text()"""
+        xp_weblinks = """//div[@data-testid="search-result"]
+        //a[@data-testid="listing-details-link"]/@href"""
+        xp_added_on = """//div[@data-testid="search-result"]
+        //span[@data-testid="date-published"]/text()[last()]"""
 
         # Create data lists from xpaths:
         price = tree.xpath(xp_prices)

@@ -1,25 +1,11 @@
 from rightmove import RightmovePropertiesForSale
+from zoopla import ZooplaPropertiesForSale
 
-barnet = RightmovePropertiesForSale(
-    location_identifier='REGION^93929',
-    max_price=465_000,
-    radius_from_location=0,
-)
+# Rightmove Properties
+# RightmovePropertiesForSale(location_identifier='REGION^93929', radius_from_location=0, )  # barnet
+# RightmovePropertiesForSale(location_identifier='REGION^1017', radius_from_location=1, )  # northwood
+# RightmovePropertiesForSale(location_identifier='REGION^1154', radius_from_location=1, )  # ruislip
+# RightmovePropertiesForSale(location_identifier='REGION^79781', radius_from_location=0.5, )  # harrow_on_the_hill
 
-northwood = RightmovePropertiesForSale(
-    location_identifier='REGION^1017',
-    max_price=465_000,
-    radius_from_location=1,
-)
-
-ruislip = RightmovePropertiesForSale(
-    location_identifier='REGION^1154',
-    max_price=465_000,
-    radius_from_location=1,
-)
-
-harrow_on_the_hill = RightmovePropertiesForSale(
-    location_identifier='REGION^79781',
-    max_price=465_000,
-    radius_from_location=0.5,
-)
+# Zoopla Properties
+ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, include_sstc=False)  # barnet
