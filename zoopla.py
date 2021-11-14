@@ -81,7 +81,7 @@ class ZooplaPropertiesForSale:
 
         # Extract postcodes to a separate column:
         postcode_regex = r"\b([A-Za-z][A-Za-z]?[0-9][0-9]?[A-Za-z]?)\b"
-        results["address"] = results["address"].astype(str) + "±"
+        results["address"] = results["address"].astype(str)
         results["postcode"] = results["address"].astype(str).str.extract(postcode_regex, expand=True)
 
         # Extract number of bedrooms from `type` to a separate column:
@@ -91,8 +91,9 @@ class ZooplaPropertiesForSale:
         results["number_bedrooms"] = pd.to_numeric(results["number_bedrooms"])
 
         # Extract the date the property was added on to rightmove
-        date_added_regex = r"\b([0-9]{1,2}th [A-Z][a-z]{1,3} [0-9]{1,4})\b"
-        results["added_on"] = results["added_on"].astype(str).str.extract(date_added_regex, expand=True)
+        ord_day_pattern = re.compile(r"(?<=\d)(st|nd|rd|th)")
+        results["added_on"] = results["added_on"].str.replace(ord_day_pattern, '')
+        results["added_on"] = pd.to_datetime(results["added_on"], format="%d %b %Y")
 
         # Clean up annoying white spaces and newlines in `type` column:
         results["type"] = results["type"].str.strip("\n").str.strip()

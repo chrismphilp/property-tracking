@@ -74,7 +74,7 @@ class RightmovePropertiesForSale:
 
         # Extract postcodes to a separate column:
         postcode_regex = r"\b([A-Za-z][A-Za-z]?[0-9][0-9]?[A-Za-z]?)\b"
-        results["address"] = results["address"].astype(str) + "±"
+        results["address"] = results["address"].astype(str)
         results["postcode"] = results["address"].astype(str).str.extract(postcode_regex, expand=True)
 
         # Extract number of bedrooms from `type` to a separate column:
