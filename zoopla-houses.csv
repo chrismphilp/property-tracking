@@ -1,4 +1,7 @@
 price,type,address,url,added_on,search_datetime,postcode,number_bedrooms
+465000.0,3 bed end terrace house for sale,"Dryfield Road, Edgware HA8",https://www.zoopla.co.uk/for-sale/details/60189012/,2021-11-15,"07:46PM on November 15, 2021",HA8,3.0
+410000.0,2 bed terraced house for sale,"Abbots Drive, South Harrow, Harrow HA2",https://www.zoopla.co.uk/for-sale/details/60188887/,2021-11-15,"07:46PM on November 15, 2021",HA2,2.0
+475000.0,3 bed semi-detached house for sale,"Rushdene Crescent, Northolt UB5",https://www.zoopla.co.uk/for-sale/details/60188077/,2021-11-14,"07:46PM on November 15, 2021",UB5,3.0
 450000.0,2 bed end terrace house for sale,"Corner Mead, Colindale NW9",https://www.zoopla.co.uk/for-sale/details/60185062/,2021-11-13,"05:16PM on November 14, 2021",NW9,2.0
 325000.0,3 bed terraced house for sale,"Meadow Close, Barnet EN5",https://www.zoopla.co.uk/for-sale/details/60177616/,2021-11-12,"05:16PM on November 14, 2021",EN5,3.0
 450000.0,3 bed terraced house for sale,"Northolt Road, South Harrow, Harrow HA2",https://www.zoopla.co.uk/for-sale/details/60173020/,2021-11-11,"05:36PM on November 14, 2021",HA2,3.0
@@ -6,31 +9,31 @@ price,type,address,url,added_on,search_datetime,postcode,number_bedrooms
 470000.0,3 bed terraced house for sale,"Milling Road, Edgware HA8",https://www.zoopla.co.uk/for-sale/details/60141748/,2021-11-08,"05:16PM on November 14, 2021",HA8,3.0
 450000.0,2 bed bungalow for sale,"Beaumont Avenue, Wembley HA0",https://www.zoopla.co.uk/for-sale/details/60135992/,2021-11-06,"05:36PM on November 14, 2021",HA0,2.0
 375000.0,2 bed end terrace house for sale,"Nursery Road, Pinner HA5",https://www.zoopla.co.uk/for-sale/details/60124211/,2021-11-05,"05:36PM on November 14, 2021",HA5,2.0
-475000.0,3 bed terraced house for sale,"Adderley Road, Harrow HA3",https://www.zoopla.co.uk/for-sale/details/60118812/,2021-11-04,"05:36PM on November 14, 2021",HA3,3.0
 435000.0,3 bed terraced house for sale,"Newnham Close, Northolt UB5",https://www.zoopla.co.uk/for-sale/details/60122008/,2021-11-04,"05:36PM on November 14, 2021",UB5,3.0
 450000.0,3 bed semi-detached house for sale,"Northwood Way, Harefield, Uxbridge UB9",https://www.zoopla.co.uk/for-sale/details/60116024/,2021-11-04,"05:36PM on November 14, 2021",UB9,3.0
 450000.0,2 bed semi-detached house for sale,"Ruislip, Hillingdon HA4",https://www.zoopla.co.uk/for-sale/details/60119200/,2021-11-04,"05:31PM on November 14, 2021",HA4,2.0
 449950.0,2 bed end terrace house for sale,"Ducks Hill Road, Ruislip HA4",https://www.zoopla.co.uk/for-sale/details/60121413/,2021-11-04,"05:31PM on November 14, 2021",HA4,2.0
-260000.0,2 bed property for sale,"152 Watford Road, Wembley HA0",https://www.zoopla.co.uk/for-sale/details/58254656/,2021-11-01,"05:36PM on November 14, 2021",HA0,2.0
+475000.0,3 bed terraced house for sale,"Adderley Road, Harrow HA3",https://www.zoopla.co.uk/for-sale/details/60118812/,2021-11-04,"05:36PM on November 14, 2021",HA3,3.0
 465000.0,3 bed terraced house for sale,"Midhurst Gardens, Hillingdon UB10",https://www.zoopla.co.uk/for-sale/details/60085776/,2021-11-01,"05:36PM on November 14, 2021",UB10,3.0
+260000.0,2 bed property for sale,"152 Watford Road, Wembley HA0",https://www.zoopla.co.uk/for-sale/details/58254656/,2021-11-01,"05:36PM on November 14, 2021",HA0,2.0
 450000.0,3 bed end terrace house for sale,"Blackford Road, Watford, Watford, Watford WD19",https://www.zoopla.co.uk/for-sale/details/60083530/,2021-10-30,"05:36PM on November 14, 2021",WD19,3.0
+425000.0,2 bed terraced house for sale,"Cordingley Road, Ruislip, Middlesex HA4",https://www.zoopla.co.uk/for-sale/details/57030325/,2021-10-29,"05:31PM on November 14, 2021",HA4,2.0
 475000.0,3 bed terraced house for sale,"Tangmere Way, London NW9",https://www.zoopla.co.uk/for-sale/details/60074589/,2021-10-29,"05:16PM on November 14, 2021",NW9,3.0
 465000.0,2 bed property for sale,"Lyonsdown Road, New Barnet, Barnet EN5",https://www.zoopla.co.uk/for-sale/details/60075650/,2021-10-29,"05:16PM on November 14, 2021",EN5,2.0
-425000.0,2 bed terraced house for sale,"Cordingley Road, Ruislip, Middlesex HA4",https://www.zoopla.co.uk/for-sale/details/57030325/,2021-10-29,"05:31PM on November 14, 2021",HA4,2.0
 400000.0,1 bed detached house for sale,"Fenstanton Avenue, North Finchley, London N12",https://www.zoopla.co.uk/for-sale/details/60064609/,2021-10-28,"05:16PM on November 14, 2021",N12,1.0
-375000.0,2 bed property for sale,"Breakspear Road North, Harefield, Uxbridge UB9",https://www.zoopla.co.uk/for-sale/details/60056479/,2021-10-27,"05:36PM on November 14, 2021",UB9,2.0
 470000.0,3 bed end terrace house for sale,"Newmarket Avenue, Northolt UB5",https://www.zoopla.co.uk/for-sale/details/60058930/,2021-10-27,"05:36PM on November 14, 2021",UB5,3.0
-400000.0,1 bed semi-detached house for sale,"Fenstanton Avenue, North Finchley N12",https://www.zoopla.co.uk/for-sale/details/52951439/,2021-10-26,"05:16PM on November 14, 2021",N12,1.0
+375000.0,2 bed property for sale,"Breakspear Road North, Harefield, Uxbridge UB9",https://www.zoopla.co.uk/for-sale/details/60056479/,2021-10-27,"05:36PM on November 14, 2021",UB9,2.0
 475000.0,3 bed terraced house for sale,"Grosvenor Crescent, Hillingdon UB10",https://www.zoopla.co.uk/for-sale/details/60048237/,2021-10-26,"05:36PM on November 14, 2021",UB10,3.0
+400000.0,1 bed semi-detached house for sale,"Fenstanton Avenue, North Finchley N12",https://www.zoopla.co.uk/for-sale/details/52951439/,2021-10-26,"05:16PM on November 14, 2021",N12,1.0
 475000.0,3 bed semi-detached house for sale,"Burnley Close, Watford, Watford, Watford WD19",https://www.zoopla.co.uk/for-sale/details/60037982/,2021-10-25,"05:36PM on November 14, 2021",WD19,3.0
 425000.0,3 bed terraced house for sale,"Garden City, Edgware, Middlesex HA8",https://www.zoopla.co.uk/for-sale/details/60044100/,2021-10-25,"05:16PM on November 14, 2021",HA8,3.0
 475000.0,2 bed semi-detached house for sale,"Victoria Road, New Barnet, Barnet EN4",https://www.zoopla.co.uk/for-sale/details/60036561/,2021-10-25,"05:16PM on November 14, 2021",EN4,2.0
 395000.0,2 bed terraced house for sale,"Attlee Road, Hayes UB4",https://www.zoopla.co.uk/for-sale/details/60044182/,2021-10-25,"05:36PM on November 14, 2021",UB4,2.0
 375000.0,2 bed semi-detached house for sale,"Burnley Close, Watford WD19",https://www.zoopla.co.uk/for-sale/details/60025819/,2021-10-22,"05:36PM on November 14, 2021",WD19,2.0
-300000.0,1 bed block of flats for sale,"Colindale, London NW9",https://www.zoopla.co.uk/for-sale/details/60018302/,2021-10-21,"05:16PM on November 14, 2021",NW9,1.0
 300000.0,2 bed terraced house for sale,"Turnberry Court, South Oxhey, Watford WD19",https://www.zoopla.co.uk/for-sale/details/60022851/,2021-10-21,"05:36PM on November 14, 2021",WD19,2.0
-325000.0,1 bed detached house for sale,"Tayfield Close, Ickenham, Uxbridge UB10",https://www.zoopla.co.uk/for-sale/details/60006796/,2021-10-20,"05:36PM on November 14, 2021",UB10,1.0
+300000.0,1 bed block of flats for sale,"Colindale, London NW9",https://www.zoopla.co.uk/for-sale/details/60018302/,2021-10-21,"05:16PM on November 14, 2021",NW9,1.0
 470000.0,3 bed end terrace house for sale,"Blenheim Road, Northolt UB5",https://www.zoopla.co.uk/for-sale/details/60007687/,2021-10-20,"05:36PM on November 14, 2021",UB5,3.0
+325000.0,1 bed detached house for sale,"Tayfield Close, Ickenham, Uxbridge UB10",https://www.zoopla.co.uk/for-sale/details/60006796/,2021-10-20,"05:36PM on November 14, 2021",UB10,1.0
 400000.0,2 bed terraced house for sale,"The Point, Ruislip, Middlesex HA4",https://www.zoopla.co.uk/for-sale/details/59986607/,2021-10-18,"05:31PM on November 14, 2021",HA4,2.0
 445000.0,3 bed semi-detached house for sale,"Ash Grove, Harefield, Middlesex UB9",https://www.zoopla.co.uk/for-sale/details/59992470/,2021-10-18,"05:36PM on November 14, 2021",UB9,3.0
 390000.0,2 bed terraced house for sale,"Rabournmead Drive, Northolt, Middlesex UB5",https://www.zoopla.co.uk/for-sale/details/60021896/,2021-10-18,"05:36PM on November 14, 2021",UB5,2.0
@@ -61,8 +64,8 @@ price,type,address,url,added_on,search_datetime,postcode,number_bedrooms
 475000.0,2 bed cottage for sale,"West End Lane, Barnet EN5",https://www.zoopla.co.uk/for-sale/details/59632968/,2021-09-06,"05:16PM on November 14, 2021",EN5,2.0
 375000.0,2 bed property for sale,"Manor Road, High Barnet, Barnet EN5",https://www.zoopla.co.uk/for-sale/details/59608958/,2021-09-02,"05:16PM on November 14, 2021",EN5,2.0
 385000.0,2 bed property for sale,"Squires Court, Abingdon Road, London N3",https://www.zoopla.co.uk/for-sale/details/59592120/,2021-09-01,"05:16PM on November 14, 2021",N3,2.0
-475000.0,2 bed terraced house for sale,"Hartland Drive, Ruislip HA4",https://www.zoopla.co.uk/for-sale/details/59567766/,2021-08-27,"05:31PM on November 14, 2021",HA4,2.0
 475000.0,3 bed property for sale,"Wood End Gardens, Northolt UB5",https://www.zoopla.co.uk/for-sale/details/59563374/,2021-08-27,"05:36PM on November 14, 2021",UB5,3.0
+475000.0,2 bed terraced house for sale,"Hartland Drive, Ruislip HA4",https://www.zoopla.co.uk/for-sale/details/59567766/,2021-08-27,"05:31PM on November 14, 2021",HA4,2.0
 475000.0,3 bed end terrace house for sale,"Gervase Road, Edgware HA8",https://www.zoopla.co.uk/for-sale/details/59710702/,2021-08-26,"05:16PM on November 14, 2021",HA8,3.0
 475000.0,2 bed terraced house for sale,"Arncliffe Close, London N11",https://www.zoopla.co.uk/for-sale/details/59545409/,2021-08-25,"05:16PM on November 14, 2021",N11,2.0
 460000.0,3 bed terraced house for sale,"Greystoke Drive, Ruislip HA4",https://www.zoopla.co.uk/for-sale/details/59524099/,2021-08-23,"05:31PM on November 14, 2021",HA4,3.0
@@ -76,11 +79,11 @@ price,type,address,url,added_on,search_datetime,postcode,number_bedrooms
 425000.0,2 bed terraced house for sale,"Thirlmere Gardens, Northwood, Greater London HA6",https://www.zoopla.co.uk/for-sale/details/59299615/,2021-07-27,"05:31PM on November 14, 2021",HA6,2.0
 465000.0,3 bed terraced house for sale,"Goldbeaters Grove, Edgware HA8",https://www.zoopla.co.uk/for-sale/details/59289862/,2021-07-27,"05:16PM on November 14, 2021",HA8,3.0
 390000.0,3 bed semi-detached house for sale,"Blackford Road, Watford WD19",https://www.zoopla.co.uk/for-sale/details/59279676/,2021-07-26,"05:36PM on November 14, 2021",WD19,3.0
-420000.0,2 bed terraced house for sale,"Kingsmead Drive, Northolt UB5",https://www.zoopla.co.uk/for-sale/details/59263166/,2021-07-23,"05:36PM on November 14, 2021",UB5,2.0
 424950.0,2 bed terraced house for sale,"Edrick Walk, Edgware HA8",https://www.zoopla.co.uk/for-sale/details/59267173/,2021-07-23,"05:16PM on November 14, 2021",HA8,2.0
+420000.0,2 bed terraced house for sale,"Kingsmead Drive, Northolt UB5",https://www.zoopla.co.uk/for-sale/details/59263166/,2021-07-23,"05:36PM on November 14, 2021",UB5,2.0
 432450.0,3 bed terraced house for sale,"Berkeley Avenue, Greenford UB6",https://www.zoopla.co.uk/for-sale/details/59248435/,2021-07-21,"05:36PM on November 14, 2021",UB6,3.0
-450000.0,2 bed terraced house for sale,"Amber Grove, Temple Fortune, London NW2",https://www.zoopla.co.uk/for-sale/details/59239474/,2021-07-21,"05:16PM on November 14, 2021",NW2,2.0
 270000.0,1 bed property for sale,"Myrtleside Close, Northwood HA6",https://www.zoopla.co.uk/for-sale/details/59241956/,2021-07-21,"05:31PM on November 14, 2021",HA6,1.0
+450000.0,2 bed terraced house for sale,"Amber Grove, Temple Fortune, London NW2",https://www.zoopla.co.uk/for-sale/details/59239474/,2021-07-21,"05:16PM on November 14, 2021",NW2,2.0
 425000.0,Property for sale,"Dersingham Road, London NW2",https://www.zoopla.co.uk/new-homes/details/59238567/,2021-07-20,"05:16PM on November 14, 2021",NW2,
 475000.0,3 bed end terrace house for sale,"Gervase Road, Burnt Oak HA8",https://www.zoopla.co.uk/for-sale/details/59191071/,2021-07-15,"05:16PM on November 14, 2021",HA8,3.0
 475000.0,3 bed end terrace house for sale,"Swan Lane, Whetstone, London N20",https://www.zoopla.co.uk/for-sale/details/59195347/,2021-07-15,"05:16PM on November 14, 2021",N20,3.0
@@ -114,8 +117,8 @@ price,type,address,url,added_on,search_datetime,postcode,number_bedrooms
 475000.0,2 bed terraced house for sale,"Bedser Drive, Greenford UB6",https://www.zoopla.co.uk/for-sale/details/56231249/,2020-09-14,"05:36PM on November 14, 2021",UB6,2.0
 250000.0,2 bed property for sale,"Lychgate Court, 34 Friern Park, North Finchley N12",https://www.zoopla.co.uk/for-sale/details/56090604/,2020-09-01,"05:16PM on November 14, 2021",N12,2.0
 299950.0,2 bed property for sale,"Farnham Close, London N20",https://www.zoopla.co.uk/for-sale/details/56042138/,2020-08-27,"05:16PM on November 14, 2021",N20,2.0
-375000.0,2 bed property for sale,"Finchley Road, London NW11",https://www.zoopla.co.uk/for-sale/details/55970503/,2020-08-21,"05:16PM on November 14, 2021",NW11,2.0
 475000.0,2 bed terraced house for sale,"Caulfield Gardens, Pinner, Middlesex HA5",https://www.zoopla.co.uk/for-sale/details/55971265/,2020-08-21,"05:36PM on November 14, 2021",HA5,2.0
+375000.0,2 bed property for sale,"Finchley Road, London NW11",https://www.zoopla.co.uk/for-sale/details/55970503/,2020-08-21,"05:16PM on November 14, 2021",NW11,2.0
 300000.0,2 bed property for sale,"Livingstone Court, Christchurch Lane, Hadley Green EN5",https://www.zoopla.co.uk/for-sale/details/55070071/,2020-06-03,"05:16PM on November 14, 2021",EN5,2.0
 399950.0,2 bed property for sale,"850 Finchley Road, Temple Fortune NW11",https://www.zoopla.co.uk/for-sale/details/54470614/,2020-03-05,"05:16PM on November 14, 2021",NW11,2.0
 399000.0,1 bed property for sale,"Hindes Road, Harrow-On-The-Hill, Harrow HA1",https://www.zoopla.co.uk/new-homes/details/53756777/,2019-12-19,"05:31PM on November 14, 2021",HA1,1.0

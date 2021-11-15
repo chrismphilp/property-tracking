@@ -28,7 +28,7 @@ class RightmovePropertiesForSale:
         self.current_page = self._request(0)
 
         try:
-            current_csv = pd.read_csv('../rightmove-houses.csv')
+            current_csv = pd.read_csv('rightmove-houses.csv')
         except:
             current_csv = None
 
@@ -100,8 +100,7 @@ class RightmovePropertiesForSale:
             current_csv = pd.concat([current_csv, results])
             current_csv["search_datetime"] = current_csv["search_datetime"].astype('str')
             current_csv["added_on"] = current_csv["added_on"].astype('str')
-            current_csv.drop_duplicates(subset=current_csv.columns.difference(["search_datetime", "added_on"]),
-                                        keep="first", inplace=True)
+            current_csv = current_csv.drop_duplicates(subset=current_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
 
         current_csv['added_on'] = pd.to_datetime(current_csv['added_on'], dayfirst=True)
         current_csv.sort_values("added_on", ascending=False, inplace=True)

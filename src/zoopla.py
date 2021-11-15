@@ -1,4 +1,3 @@
-import datetime as dt
 import urllib.parse
 import requests
 import math
@@ -31,7 +30,7 @@ class ZooplaPropertiesForSale:
         self.current_page = self._request(1)
 
         try:
-            current_csv = pd.read_csv('../zoopla-houses.csv')
+            current_csv = pd.read_csv('zoopla-houses.csv')
         except:
             current_csv = None
 
