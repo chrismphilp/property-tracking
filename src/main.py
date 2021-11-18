@@ -34,7 +34,7 @@ g = Github(GITHUB_ACCESS_TOKEN)
 
 @app.route('/')
 def main():
-    repo = g.get_repo(repository_name)
+    repo = g.get_user().get_repo(repository_name)
 
     # Rightmove Properties
     repo_rightmove_csv = repo.get_contents("rightmove-houses.csv")
