@@ -6,6 +6,7 @@ from rightmove import RightmovePropertiesForSale
 from zoopla import ZooplaPropertiesForSale
 from flask import Flask
 import google.cloud.logging
+import google.auth
 from google.cloud import secretmanager
 from github import Github
 
@@ -14,17 +15,19 @@ from github import Github
 
 app = Flask(__name__)
 
-PROJECT_ID = os.environ.get("GCP_PROJECT", "GCP_PROJECT environment variable is not set.")
-REPOSITORY_NAME = os.environ.get("REPOSITORY", "REPOSITORY environment variable is not set.")
+repository_name = os.environ.get("REPOSITORY", "REPOSITORY environment variable is not set.")
 
-# Google
+# Logging
 client = google.cloud.logging.Client()
 client.setup_logging()
+
+# Secrets
 secrets = secretmanager.SecretManagerServiceClient()
+_, project_id = google.auth.default()
+GITHUB_ACCESS_TOKEN = secrets.access_secret_version(
+    request={"name": "projects/" + project_id + "/secrets/github-access-token/versions/1"}).payload.data.decode("utf-8")
 
 # GitHub
-GITHUB_ACCESS_TOKEN = secrets.access_secret_version(
-    request={"name": "projects/" + PROJECT_ID + "/secrets/github-access-token/versions/1"}).payload.data.decode("utf-8")
 g = Github(GITHUB_ACCESS_TOKEN)
 
 
@@ -42,7 +45,7 @@ def main():
     ZooplaPropertiesForSale(location_identifier='ruislip', radius_from_location=1, include_sstc=False)  # ruislip
     ZooplaPropertiesForSale(location_identifier='harrow-on-the-hill', radius_from_location=1, include_sstc=False)  # harrow-on-the-hill
 
-    repo = g.get_user().get_repo(REPOSITORY_NAME)
+    repo = g.get_user().get_repo(repository_name)
 
     # Update Rightmove CSV
     rightmove_contents = repo.get_contents("rightmove-houses.csv")
