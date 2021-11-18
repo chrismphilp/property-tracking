@@ -2,6 +2,7 @@ import os
 import base64
 
 import datetime as dt
+import pandas as pd
 from rightmove import RightmovePropertiesForSale
 from zoopla import ZooplaPropertiesForSale
 from flask import Flask
@@ -33,31 +34,39 @@ g = Github(GITHUB_ACCESS_TOKEN)
 
 @app.route('/')
 def main():
+    repo = g.get_repo(repository_name)
+
     # Rightmove Properties
-    RightmovePropertiesForSale(location_identifier='REGION^93929', radius_from_location=0, )  # barnet
-    RightmovePropertiesForSale(location_identifier='REGION^1017', radius_from_location=1, )  # northwood
-    RightmovePropertiesForSale(location_identifier='REGION^1154', radius_from_location=1, )  # ruislip
-    RightmovePropertiesForSale(location_identifier='REGION^79781', radius_from_location=0.5, )  # harrow_on_the_hill
+    repo_rightmove_csv = repo.get_contents("rightmove-houses.csv")
+    rightmove_csv = pd.concat([
+        repo_rightmove_csv,
+        RightmovePropertiesForSale(location_identifier='REGION^93929', radius_from_location=0, ).parse_site(),  # barnet
+        RightmovePropertiesForSale(location_identifier='REGION^1017', radius_from_location=1, ).parse_site(),  # northwood
+        RightmovePropertiesForSale(location_identifier='REGION^1154', radius_from_location=1, ).parse_site(),  # ruislip
+        RightmovePropertiesForSale(location_identifier='REGION^79781', radius_from_location=0.5, ).parse_site(),  # harrow_on_the_hill
+    ])
+    rightmove_csv.drop_duplicates(subset=rightmove_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
 
     # Zoopla Properties
-    ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, include_sstc=False)  # barnet
-    ZooplaPropertiesForSale(location_identifier='london/northwood', radius_from_location=1, include_sstc=False)  # northwood
-    ZooplaPropertiesForSale(location_identifier='ruislip', radius_from_location=1, include_sstc=False)  # ruislip
-    ZooplaPropertiesForSale(location_identifier='harrow-on-the-hill', radius_from_location=1, include_sstc=False)  # harrow-on-the-hill
-
-    repo = g.get_user().get_repo(repository_name)
+    repo_zoopla_csv = repo.get_contents("zoopla-houses.csv")
+    zoopla_csv = pd.concat([
+        repo_zoopla_csv,
+        ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, include_sstc=False).parse_site(),  # barnet
+        ZooplaPropertiesForSale(location_identifier='london/northwood', radius_from_location=1, include_sstc=False).parse_site(),  # northwood
+        ZooplaPropertiesForSale(location_identifier='ruislip', radius_from_location=1, include_sstc=False).parse_site(),  # ruislip
+        ZooplaPropertiesForSale(location_identifier='harrow-on-the-hill', radius_from_location=1, include_sstc=False).parse_site(),  # harrow-on-the-hill
+    ])
+    zoopla_csv.drop_duplicates(subset=zoopla_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
 
     # Update Rightmove CSV
-    rightmove_contents = repo.get_contents("rightmove-houses.csv")
-    rightmove_csv_encoded = base64.b64encode(open("rightmove-houses.csv", "r"))
+    rightmove_csv_encoded = base64.b64encode(rightmove_csv)
     rightmove_commit_message = f"Updating rightmove-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}"
-    repo.update_file(path="rightmove-houses.csv", message=rightmove_commit_message, content=rightmove_csv_encoded, sha=rightmove_contents.sha)
+    repo.update_file(path="rightmove-houses.csv", message=rightmove_commit_message, content=rightmove_csv_encoded, sha=repo_rightmove_csv.sha)
 
     # Update Zoopla CSV
-    zoopla_contents = repo.get_contents("rightmove-houses.csv")
-    zoopla_csv_encoded = base64.b64encode(open("zoopla-houses.csv", "r"))
+    zoopla_csv_encoded = base64.b64encode(zoopla_csv)
     zoopla_commit_message = f"Updating zoopla-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}"
-    repo.update_file(path="zoopla-houses.csv", message=zoopla_commit_message, content=zoopla_csv_encoded, sha=zoopla_contents.sha)
+    repo.update_file(path="zoopla-houses.csv", message=zoopla_commit_message, content=zoopla_csv_encoded, sha=repo_zoopla_csv.sha)
 
     return '', 200, {}
 

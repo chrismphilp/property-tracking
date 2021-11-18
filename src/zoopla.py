@@ -37,6 +37,9 @@ class ZooplaPropertiesForSale:
 
         self.process_results(current_csv).to_csv('zoopla-houses.csv', index=False)
 
+    def parse_site(self):
+        return self.process_results().to_csv(index=False)
+
     def create_url(self, index: int = 2):
         url_vars = {
             "include_sold": str(self.include_sstc).lower(),
@@ -54,22 +57,12 @@ class ZooplaPropertiesForSale:
 
     def _request(self, index):
         self.url = self.create_url(index)
-        print(self.url)
         r = requests.get(self.url)
         if r.status_code != 200:
             raise ValueError('Cannot make request to rightmove.co.uk')
         return r.content
 
-    @property
-    def number_of_pages(self):
-        tree = html.fromstring(self.current_page)
-        xpath = """//main[@data-testid="search-content"]
-        //p[@data-testid="total-results"]/text()"""
-        pattern = re.compile(r"""[0-9]+""", re.VERBOSE)
-        pages = pattern.findall(str(tree.xpath(xpath)))[0]
-        return math.ceil(int(pages) / self.page_size)
-
-    def process_results(self, current_csv):
+    def process_results(self):
         no_of_pages = self.number_of_pages
         logging.info(f"Processing {no_of_pages} on {self.base_url}")
 
@@ -101,18 +94,12 @@ class ZooplaPropertiesForSale:
         # Clean up annoying white spaces and newlines in `type` column:
         results["type"] = results["type"].str.strip("\n").str.strip()
 
-        if current_csv is None:
-            return results
-        else:
-            current_csv = pd.concat([current_csv, results])
-            current_csv["search_datetime"] = current_csv["search_datetime"].astype('str')
-            current_csv["added_on"] = current_csv["added_on"].astype('str')
-            current_csv.drop_duplicates(subset=current_csv.columns.difference(["search_datetime", "added_on"]),
-                                        keep="first", inplace=True)
+        results["search_datetime"] = results["search_datetime"].astype('str')
+        results["added_on"] = results["added_on"].astype('str')
 
-        current_csv['added_on'] = pd.to_datetime(current_csv['added_on'], dayfirst=True)
-        current_csv.sort_values("added_on", ascending=False, inplace=True)
-        return current_csv
+        results['added_on'] = pd.to_datetime(results['added_on'], dayfirst=True)
+        results.sort_values("added_on", ascending=False, inplace=True)
+        return results
 
     def process_page(self):
         tree = html.fromstring(self.current_page)
@@ -139,3 +126,12 @@ class ZooplaPropertiesForSale:
 
         data = [price, titles, addresses, weblinks, added_on]
         return self.parser.create_data_frame(data)
+
+    @property
+    def number_of_pages(self):
+        tree = html.fromstring(self.current_page)
+        xpath = """//main[@data-testid="search-content"]
+        //p[@data-testid="total-results"]/text()"""
+        pattern = re.compile(r"""[0-9]+""", re.VERBOSE)
+        pages = pattern.findall(str(tree.xpath(xpath)))[0]
+        return math.ceil(int(pages) / self.page_size)
