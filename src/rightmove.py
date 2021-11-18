@@ -1,5 +1,6 @@
 import datetime as dt
 import urllib.parse
+import logging
 import requests
 import math
 from lxml import html
@@ -61,9 +62,12 @@ class RightmovePropertiesForSale:
         return math.ceil(int(tree.xpath(xpath)[0].replace(",", "")) / 24)
 
     def process_results(self, current_csv):
+        no_of_pages = self.number_of_pages
+        logging.info(f"Processing {no_of_pages} on {self.base_url}")
+
         results = self.process_page()
 
-        for p in range(1, self.number_of_pages, 1):
+        for p in range(1, no_of_pages, 1):
             current_index = p * 24
 
             self.current_page = self._request(current_index)

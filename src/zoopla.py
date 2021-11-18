@@ -1,4 +1,5 @@
 import urllib.parse
+import logging
 import requests
 import math
 import re
@@ -69,6 +70,9 @@ class ZooplaPropertiesForSale:
         return math.ceil(int(pages) / self.page_size)
 
     def process_results(self, current_csv):
+        no_of_pages = self.number_of_pages
+        logging.info(f"Processing {no_of_pages} on {self.base_url}")
+
         results = self.process_page()
 
         for p in range(1, self.number_of_pages, 1):
