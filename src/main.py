@@ -3,6 +3,7 @@ import base64
 
 import datetime as dt
 import pandas as pd
+from io import StringIO
 from rightmove import RightmovePropertiesForSale
 from zoopla import ZooplaPropertiesForSale
 from flask import Flask
@@ -37,7 +38,8 @@ def main():
     repo = g.get_user().get_repo(repository_name)
 
     # Rightmove Properties
-    repo_rightmove_csv = pd.read_csv(repo.get_contents("rightmove-houses.csv"))
+
+    repo_rightmove_csv = pd.read_csv(StringIO(repo.get_contents("rightmove-houses.csv").content))
     rightmove_csv = pd.concat([
         repo_rightmove_csv,
         RightmovePropertiesForSale(location_identifier='REGION^93929', radius_from_location=0, ).parse_site(),  # barnet
@@ -48,7 +50,7 @@ def main():
     rightmove_csv.drop_duplicates(subset=rightmove_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
 
     # Zoopla Properties
-    repo_zoopla_csv = pd.read_csv(repo.get_contents("zoopla-houses.csv"))
+    repo_zoopla_csv = pd.read_csv(StringIO(repo.get_contents("zoopla-houses.csv").content))
     zoopla_csv = pd.concat([
         repo_zoopla_csv,
         ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, include_sstc=False).parse_site(),  # barnet
