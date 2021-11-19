@@ -38,32 +38,35 @@ def main():
     repo = g.get_user().get_repo(repository_name)
 
     # Rightmove Properties
-
-    repo_rightmove_csv = pd.read_csv(StringIO(repo.get_contents("rightmove-houses.csv").content))
+    repo_rightmove_csv = repo.get_contents("rightmove-houses.csv")
+    parsed_rightmove_csv = pd.read_csv(StringIO(repo_rightmove_csv.content))
     rightmove_csv = pd.concat([
-        repo_rightmove_csv,
+        parsed_rightmove_csv,
         RightmovePropertiesForSale(location_identifier='REGION^93929', radius_from_location=0, ).parse_site(),  # barnet
         RightmovePropertiesForSale(location_identifier='REGION^1017', radius_from_location=1, ).parse_site(),  # northwood
         RightmovePropertiesForSale(location_identifier='REGION^1154', radius_from_location=1, ).parse_site(),  # ruislip
         RightmovePropertiesForSale(location_identifier='REGION^79781', radius_from_location=0.5, ).parse_site(),  # harrow_on_the_hill
     ])
-    rightmove_csv.drop_duplicates(subset=rightmove_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
-
-    # Zoopla Properties
-    repo_zoopla_csv = pd.read_csv(StringIO(repo.get_contents("zoopla-houses.csv").content))
-    zoopla_csv = pd.concat([
-        repo_zoopla_csv,
-        ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, include_sstc=False).parse_site(),  # barnet
-        ZooplaPropertiesForSale(location_identifier='london/northwood', radius_from_location=1, include_sstc=False).parse_site(),  # northwood
-        ZooplaPropertiesForSale(location_identifier='ruislip', radius_from_location=1, include_sstc=False).parse_site(),  # ruislip
-        ZooplaPropertiesForSale(location_identifier='harrow-on-the-hill', radius_from_location=1, include_sstc=False).parse_site(),  # harrow-on-the-hill
-    ])
-    zoopla_csv.drop_duplicates(subset=zoopla_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
+    rightmove_csv = rightmove_csv.drop_duplicates(subset=rightmove_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
+    rightmove_csv = rightmove_csv.to_csv(index=False)
 
     # Update Rightmove CSV
     rightmove_csv_encoded = base64.b64encode(rightmove_csv)
     rightmove_commit_message = f"Updating rightmove-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}"
     repo.update_file(path="rightmove-houses.csv", message=rightmove_commit_message, content=rightmove_csv_encoded, sha=repo_rightmove_csv.sha)
+
+    # Zoopla Properties
+    repo_zoopla_csv = repo.get_contents("zoopla-houses.csv")
+    parsed_zoopla_csv = pd.read_csv(StringIO(repo_zoopla_csv.content))
+    zoopla_csv = pd.concat([
+        parsed_zoopla_csv,
+        ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, include_sstc=False).parse_site(),  # barnet
+        ZooplaPropertiesForSale(location_identifier='london/northwood', radius_from_location=1, include_sstc=False).parse_site(),  # northwood
+        ZooplaPropertiesForSale(location_identifier='ruislip', radius_from_location=1, include_sstc=False).parse_site(),  # ruislip
+        ZooplaPropertiesForSale(location_identifier='harrow-on-the-hill', radius_from_location=1, include_sstc=False).parse_site(),  # harrow-on-the-hill
+    ])
+    zoopla_csv = zoopla_csv.drop_duplicates(subset=zoopla_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
+    zoopla_csv = zoopla_csv.to_csv(index=False)
 
     # Update Zoopla CSV
     zoopla_csv_encoded = base64.b64encode(zoopla_csv)

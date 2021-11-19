@@ -29,7 +29,7 @@ class RightmovePropertiesForSale:
         self.current_page = self._request(0)
 
     def parse_site(self):
-        return self.process_results().to_csv(index=False)
+        return self.process_results()
 
     def create_url(self, index: int = 0):
         url_vars = {
@@ -52,7 +52,7 @@ class RightmovePropertiesForSale:
 
     def process_results(self):
         no_of_pages = self.number_of_pages
-        logging.info(f"Processing {no_of_pages} on {self.base_url}")
+        logging.info(f"Processing {no_of_pages} on {self.base_url} for {self.location_identifier}")
 
         results = self.process_page()
 

@@ -38,7 +38,7 @@ class ZooplaPropertiesForSale:
         self.process_results(current_csv).to_csv('zoopla-houses.csv', index=False)
 
     def parse_site(self):
-        return self.process_results().to_csv(index=False)
+        return self.process_results()
 
     def create_url(self, index: int = 2):
         url_vars = {
