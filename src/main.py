@@ -51,9 +51,8 @@ def main():
     rightmove_csv = rightmove_csv.to_csv(index=False)
 
     # Update Rightmove CSV
-    rightmove_csv_encoded = base64.b64encode(bytes(rightmove_csv, encoding='utf-8'))
     rightmove_commit_message = f"Updating rightmove-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}"
-    repo.update_file(path="rightmove-houses.csv", message=rightmove_commit_message, content=rightmove_csv_encoded, sha=repo_rightmove_csv.sha)
+    repo.update_file(path="rightmove-houses.csv", message=rightmove_commit_message, content=bytes(rightmove_csv, encoding='utf-8'), sha=repo_rightmove_csv.sha)
 
     # Zoopla Properties
     repo_zoopla_csv = repo.get_contents("zoopla-houses.csv")
@@ -69,9 +68,8 @@ def main():
     zoopla_csv = zoopla_csv.to_csv(index=False)
 
     # Update Zoopla CSV
-    zoopla_csv_encoded = base64.b64encode(bytes(zoopla_csv, encoding='utf-8'))
     zoopla_commit_message = f"Updating zoopla-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}"
-    repo.update_file(path="zoopla-houses.csv", message=zoopla_commit_message, content=zoopla_csv_encoded, sha=repo_zoopla_csv.sha)
+    repo.update_file(path="zoopla-houses.csv", message=zoopla_commit_message, content=bytes(zoopla_csv, encoding='utf-8'), sha=repo_zoopla_csv.sha)
 
     return '', 200, {}
 
