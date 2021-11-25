@@ -1,9 +1,8 @@
 import os
-import base64
 
 import datetime as dt
 import pandas as pd
-from io import StringIO
+from io import BytesIO
 from rightmove import RightmovePropertiesForSale
 from zoopla import ZooplaPropertiesForSale
 from flask import Flask
@@ -39,7 +38,7 @@ def main():
 
     # Rightmove Properties
     repo_rightmove_csv = repo.get_contents("rightmove-houses.csv")
-    parsed_rightmove_csv = pd.read_csv(StringIO(repo_rightmove_csv.content))
+    parsed_rightmove_csv = pd.read_csv(BytesIO(repo_rightmove_csv.decoded_content))
     rightmove_csv = pd.concat([
         parsed_rightmove_csv,
         RightmovePropertiesForSale(location_identifier='REGION^93929', radius_from_location=0, ).parse_site(),  # barnet
@@ -56,7 +55,7 @@ def main():
 
     # Zoopla Properties
     repo_zoopla_csv = repo.get_contents("zoopla-houses.csv")
-    parsed_zoopla_csv = pd.read_csv(StringIO(repo_zoopla_csv.content))
+    parsed_zoopla_csv = pd.read_csv(BytesIO(repo_zoopla_csv.decoded_content))
     zoopla_csv = pd.concat([
         parsed_zoopla_csv,
         ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, include_sstc=False).parse_site(),  # barnet
