@@ -30,13 +30,6 @@ class ZooplaPropertiesForSale:
 
         self.current_page = self._request(1)
 
-        try:
-            current_csv = pd.read_csv('zoopla-houses.csv')
-        except:
-            current_csv = None
-
-        self.process_results(current_csv).to_csv('zoopla-houses.csv', index=False)
-
     def parse_site(self):
         return self.process_results()
 
