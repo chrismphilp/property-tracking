@@ -57,7 +57,7 @@ class ZooplaPropertiesForSale:
 
     def process_results(self):
         no_of_pages = self.number_of_pages
-        logging.info(f"Processing {no_of_pages} on {self.base_url}")
+        logging.info(f"Processing {no_of_pages} pages on {self.base_url} for {self.location_identifier}")
 
         results = self.process_page()
 
@@ -90,7 +90,6 @@ class ZooplaPropertiesForSale:
         results["search_datetime"] = results["search_datetime"].astype('str')
         results["added_on"] = results["added_on"].astype('str')
 
-        results['added_on'] = pd.to_datetime(results['added_on'], dayfirst=True)
         results.sort_values("added_on", ascending=False, inplace=True)
         return results
 

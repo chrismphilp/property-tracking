@@ -46,8 +46,11 @@ def main():
         RightmovePropertiesForSale(location_identifier='REGION^1154', radius_from_location=1, ).parse_site(),  # ruislip
         RightmovePropertiesForSale(location_identifier='REGION^79781', radius_from_location=0.5, ).parse_site(),  # harrow_on_the_hill
     ])
-    rightmove_csv = rightmove_csv.drop_duplicates(subset=rightmove_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
+    rightmove_csv['added_on'] = pd.to_datetime(rightmove_csv['added_on'], dayfirst=True)
     rightmove_csv = rightmove_csv.sort_values("added_on", ascending=False)
+    rightmove_csv["added_on"] = rightmove_csv["added_on"].astype('str')
+
+    rightmove_csv = rightmove_csv.drop_duplicates(subset=rightmove_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
     rightmove_csv = rightmove_csv.to_csv(index=False)
 
     # Update Rightmove CSV
@@ -64,8 +67,11 @@ def main():
         ZooplaPropertiesForSale(location_identifier='ruislip', radius_from_location=1, include_sstc=False).parse_site(),  # ruislip
         ZooplaPropertiesForSale(location_identifier='harrow-on-the-hill', radius_from_location=1, include_sstc=False).parse_site(),  # harrow-on-the-hill
     ])
-    zoopla_csv = zoopla_csv.drop_duplicates(subset=zoopla_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
+    zoopla_csv['added_on'] = pd.to_datetime(zoopla_csv['added_on'], dayfirst=True)
     zoopla_csv = zoopla_csv.sort_values("added_on", ascending=False)
+    zoopla_csv["added_on"] = zoopla_csv["added_on"].astype('str')
+
+    zoopla_csv = zoopla_csv.drop_duplicates(subset=zoopla_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
     zoopla_csv = zoopla_csv.to_csv(index=False)
 
     # Update Zoopla CSV
