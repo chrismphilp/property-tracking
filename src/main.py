@@ -2,13 +2,15 @@ import os
 
 import datetime as dt
 import pandas as pd
-from io import BytesIO
-from rightmove import RightmovePropertiesForSale
-from zoopla import ZooplaPropertiesForSale
-from gmail import GMail
-from flask import Flask
 import google.cloud.logging
 import google.auth
+
+from rightmove import RightmovePropertiesForSale
+from zoopla import ZooplaPropertiesForSale
+from email import EmailSender
+
+from io import BytesIO
+from flask import Flask
 from google.cloud import secretmanager
 from github import Github
 
@@ -80,7 +82,7 @@ def main():
     repo.update_file(path="zoopla-houses.csv", message=zoopla_commit_message, content=bytes(zoopla_csv, encoding='utf-8'), sha=repo_zoopla_csv.sha)
 
     # Send email
-    GMail(rightmove_csv)
+    EmailSender(rightmove_csv)
 
     return '', 200, {}
 
