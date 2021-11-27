@@ -7,7 +7,7 @@ import google.auth
 
 from rightmove import RightmovePropertiesForSale
 from zoopla import ZooplaPropertiesForSale
-from email import EmailSender
+from email_handler import EmailSender
 
 from io import BytesIO
 from flask import Flask
@@ -28,8 +28,7 @@ client.setup_logging()
 # Secrets
 secrets = secretmanager.SecretManagerServiceClient()
 _, project_id = google.auth.default()
-GITHUB_ACCESS_TOKEN = secrets.access_secret_version(
-    request={"name": "projects/" + project_id + "/secrets/github-access-token/versions/1"}).payload.data.decode("utf-8")
+GITHUB_ACCESS_TOKEN = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/github-access-token/versions/1"}).payload.data.decode("utf-8")
 
 # GitHub
 g = Github(GITHUB_ACCESS_TOKEN)
