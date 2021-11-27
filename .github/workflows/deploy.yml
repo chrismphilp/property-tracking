@@ -2,7 +2,7 @@ name: Deploy to GAE
 
 on:
   push:
-    paths: [ '.github/**', 'src/**' ]
+    paths: [ '.github/**', 'src/**', 'app.yaml', 'requirements.txt' ]
   pull_request:
     branches: [ main ]
 
