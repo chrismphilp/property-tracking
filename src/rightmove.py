@@ -1,11 +1,12 @@
-import datetime as dt
 import urllib.parse
 import logging
 import requests
 import math
-from lxml import html
+
+import datetime as dt
 import pandas as pd
 
+from lxml import html
 from parse import Parser
 
 

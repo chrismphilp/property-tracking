@@ -3,9 +3,10 @@ import logging
 import requests
 import math
 import re
-from lxml import html
+
 import pandas as pd
 
+from lxml import html
 from parse import Parser
 
 
