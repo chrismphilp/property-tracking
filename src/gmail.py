@@ -13,11 +13,9 @@ from google.oauth2.credentials import Credentials
 secrets = secretmanager.SecretManagerServiceClient()
 _, project_id = google.auth.default()
 
-GMAIL_ACCESS_JSON = secrets.access_secret_version(
-    request={"name": "projects/" + project_id + "/secrets/gmail-token/versions/1"}).payload.data.decode("utf-8")
-
-sender_email = os.environ.get("SENDER_EMAIL", "SENDER_EMAIL environment variable is not set.")
-to_email = os.environ.get("TO_EMAIL", "SENDER_EMAIL environment variable is not set.")
+GMAIL_ACCESS_JSON = secrets.access_secret_version(request={"name": "projects/" + project_id + "/secrets/gmail-token/versions/1"}).payload.data.decode("utf-8")
+SENDER_EMAIL = secrets.access_secret_version(request={"name": "projects/" + project_id + "/secrets/sender-email/versions/1"}).payload.data.decode("utf-8")
+TO_EMAIL = secrets.access_secret_version(request={"name": "projects/" + project_id + "/secrets/to-email/versions/1"}).payload.data.decode("utf-8")
 
 
 class GMail:
@@ -41,8 +39,8 @@ class GMail:
         logging.info(f"Creating email with data items of length: {len(self.dataframe)}")
 
         message = MIMEText(message_text)
-        message['to'] = to_email
-        message['from'] = sender_email
+        message['to'] = TO_EMAIL
+        message['from'] = SENDER_EMAIL
         message['subject'] = subject
 
         return {'raw': base64.urlsafe_b64encode(message.as_bytes())}
