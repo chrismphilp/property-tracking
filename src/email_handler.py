@@ -67,6 +67,7 @@ class EmailSender:
         recipients = []
         for email in str(to_email).split(","):
             recipients.append(Email(email))
+        return recipients
 
     @staticmethod
     def authenticate():
