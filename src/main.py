@@ -62,8 +62,8 @@ def process_rightmove_csv(repo, today):
     ])
     rightmove_csv['added_on'] = pd.to_datetime(rightmove_csv['added_on'], dayfirst=True)
     rightmove_csv = rightmove_csv.sort_values("added_on", ascending=False)
-    todays_rightmove_houses = rightmove_csv.loc[rightmove_csv["added_on"] == today]
     rightmove_csv["added_on"] = rightmove_csv["added_on"].astype('str')
+    todays_rightmove_houses = rightmove_csv.loc[rightmove_csv["added_on"] == today]
 
     rightmove_csv = rightmove_csv.drop_duplicates(subset=rightmove_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
     rightmove_csv = rightmove_csv.to_csv(index=False)
@@ -88,8 +88,8 @@ def process_zoopla_csv(repo, today):
     ])
     zoopla_csv['added_on'] = pd.to_datetime(zoopla_csv['added_on'], dayfirst=True)
     zoopla_csv = zoopla_csv.sort_values("added_on", ascending=False)
-    todays_zooplas_houses = zoopla_csv.loc[zoopla_csv["added_on"] == today]
     zoopla_csv["added_on"] = zoopla_csv["added_on"].astype('str')
+    todays_zooplas_houses = zoopla_csv.loc[zoopla_csv["added_on"] == today]
 
     zoopla_csv = zoopla_csv.drop_duplicates(subset=zoopla_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
     zoopla_csv = zoopla_csv.to_csv(index=False)
