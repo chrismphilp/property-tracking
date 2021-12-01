@@ -2,7 +2,7 @@ import logging
 import google.auth
 
 from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail, Email
+from sendgrid.helpers.mail import Mail, Email, To
 from python_http_client.exceptions import HTTPError
 
 from google.cloud import secretmanager
@@ -66,7 +66,7 @@ class EmailSender:
     def generate_recipients():
         recipients = []
         for email in str(to_email).split(","):
-            recipients.append(Email(email))
+            recipients.append(To(email))
         return recipients
 
     @staticmethod
