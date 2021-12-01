@@ -37,10 +37,22 @@ g = Github(GITHUB_ACCESS_TOKEN)
 @app.route('/')
 def main():
     repo = g.get_user().get_repo(repository_name)
+    today = dt.datetime.now().strftime("%d/%m/%Y")
 
+    todays_rightmove_houses = process_rightmove_csv(repo, today)
+    todays_zooplas_houses = process_zoopla_csv(repo, today)
+
+    # Send email
+    EmailSender(pd.concat([todays_rightmove_houses, todays_zooplas_houses]))
+
+    return '', 200, {}
+
+
+def process_rightmove_csv(repo, today):
     # Rightmove Properties
     repo_rightmove_csv = repo.get_contents("rightmove-houses.csv")
     parsed_rightmove_csv = pd.read_csv(BytesIO(repo_rightmove_csv.decoded_content))
+
     rightmove_csv = pd.concat([
         parsed_rightmove_csv,
         RightmovePropertiesForSale(location_identifier='REGION^93929', radius_from_location=0, ).parse_site(),  # barnet
@@ -50,6 +62,7 @@ def main():
     ])
     rightmove_csv['added_on'] = pd.to_datetime(rightmove_csv['added_on'], dayfirst=True)
     rightmove_csv = rightmove_csv.sort_values("added_on", ascending=False)
+    todays_rightmove_houses = rightmove_csv.loc[rightmove_csv["added_on"] == today]
     rightmove_csv["added_on"] = rightmove_csv["added_on"].astype('str')
 
     rightmove_csv = rightmove_csv.drop_duplicates(subset=rightmove_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
@@ -59,6 +72,10 @@ def main():
     rightmove_commit_message = f"Updating rightmove-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}"
     repo.update_file(path="rightmove-houses.csv", message=rightmove_commit_message, content=bytes(rightmove_csv, encoding='utf-8'), sha=repo_rightmove_csv.sha)
 
+    return todays_rightmove_houses
+
+
+def process_zoopla_csv(repo, today):
     # Zoopla Properties
     repo_zoopla_csv = repo.get_contents("zoopla-houses.csv")
     parsed_zoopla_csv = pd.read_csv(BytesIO(repo_zoopla_csv.decoded_content))
@@ -71,6 +88,7 @@ def main():
     ])
     zoopla_csv['added_on'] = pd.to_datetime(zoopla_csv['added_on'], dayfirst=True)
     zoopla_csv = zoopla_csv.sort_values("added_on", ascending=False)
+    todays_zooplas_houses = zoopla_csv.loc[zoopla_csv["added_on"] == today]
     zoopla_csv["added_on"] = zoopla_csv["added_on"].astype('str')
 
     zoopla_csv = zoopla_csv.drop_duplicates(subset=zoopla_csv.columns.difference(["search_datetime", "added_on"]), keep="first")
@@ -80,10 +98,7 @@ def main():
     zoopla_commit_message = f"Updating zoopla-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}"
     repo.update_file(path="zoopla-houses.csv", message=zoopla_commit_message, content=bytes(zoopla_csv, encoding='utf-8'), sha=repo_zoopla_csv.sha)
 
-    # Send email
-    EmailSender(rightmove_csv)
-
-    return '', 200, {}
+    return todays_zooplas_houses
 
 
 @app.route('/_ah/warmup')

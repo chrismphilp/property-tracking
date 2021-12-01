@@ -25,15 +25,34 @@ class EmailSender:
     def send_email(self):
         logging.info(f"Sending email")
 
-        try:
-            message = self.create_email_text("Testing", "<p>Hello, World!</p>")
-            response = self.api_client.send(message)
-            return f"email.status_code={response.status_code}"
+        if len(self.dataframe) > 0:
+            try:
+                date = self.dataframe.iloc[0]["added_on"]
+                message = self.generate_mail(f"Properties for {date}", "<p>Hello, World!</p>")
+                response = self.api_client.send(message)
+                return f"email.status_code={response.status_code}"
 
-        except HTTPError as error:
-            logging.error(f"HTTPError trying to send email: {error}")
+            except HTTPError as error:
+                logging.error(f"HTTPError trying to send email: {error}")
 
-    def create_email_text(self, subject, message_text):
+    def create_email_text(self):
+        email_message_start = "<table>" \
+                              "<tr>" \
+                              "<th>Address</th>" \
+                              "<th>Link</th>" \
+                              "</tr>"
+        content = ""
+        for index, row in self.dataframe.iterrows():
+            content += "<tr>" \
+                       f"<td>{row['address']}</td>" \
+                       f"<td><a>{row['url']}</a></td>" \
+                       "</tr>"
+
+        email_message_end = "</table>"
+
+        return email_message_start + content + email_message_end
+
+    def generate_mail(self, subject, message_text):
         logging.info(f"Creating email with data items of length: {len(self.dataframe)}")
 
         return Mail(
