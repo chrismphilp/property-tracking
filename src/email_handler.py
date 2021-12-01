@@ -10,9 +10,9 @@ from google.cloud import secretmanager
 secrets = secretmanager.SecretManagerServiceClient()
 _, project_id = google.auth.default()
 
-sendgrid_api_key = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/sendgrid-api-key/versions/1"}).payload.data.decode("utf-8")
-from_email = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/from-email/versions/1"}).payload.data.decode("utf-8")
-to_email = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/to-email/versions/1"}).payload.data.decode("utf-8")
+sendgrid_api_key = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/sendgrid-api-key/versions/latest"}).payload.data.decode("utf-8")
+from_email = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/from-email/versions/latest"}).payload.data.decode("utf-8")
+to_email = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/to-email/versions/latest"}).payload.data.decode("utf-8")
 
 
 class EmailSender:

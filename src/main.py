@@ -28,7 +28,7 @@ client.setup_logging()
 # Secrets
 secrets = secretmanager.SecretManagerServiceClient()
 _, project_id = google.auth.default()
-GITHUB_ACCESS_TOKEN = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/github-access-token/versions/1"}).payload.data.decode("utf-8")
+GITHUB_ACCESS_TOKEN = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/github-access-token/versions/latest"}).payload.data.decode("utf-8")
 
 # GitHub
 g = Github(GITHUB_ACCESS_TOKEN)
