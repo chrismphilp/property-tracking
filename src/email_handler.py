@@ -28,7 +28,7 @@ class EmailSender:
         if len(self.dataframe) > 0:
             try:
                 date = self.dataframe.iloc[0]["added_on"]
-                message = self.generate_mail(f"Properties for {date}", "<p>Hello, World!</p>")
+                message = self.generate_mail(f"Properties for {date}", self.create_email_text())
                 response = self.api_client.send(message)
                 return f"email.status_code={response.status_code}"
 
