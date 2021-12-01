@@ -36,7 +36,7 @@ class EmailSender:
                 logging.error(f"HTTPError trying to send email: {error}")
 
     def create_email_text(self):
-        email_message_start = "<table>" \
+        email_message_start = "<table border='1' style='text-align: left; width:100%'>" \
                               "<tr>" \
                               "<th>Address</th>" \
                               "<th>Link</th>" \
@@ -45,7 +45,7 @@ class EmailSender:
         for index, row in self.dataframe.iterrows():
             content += "<tr>" \
                        f"<td>{row['address']}</td>" \
-                       f"<td><a>{row['url']}</a></td>" \
+                       f"<td><a href='{row['url']}'>{row['url']}</a></td>" \
                        "</tr>"
 
         email_message_end = "</table>"
@@ -56,11 +56,17 @@ class EmailSender:
         logging.info(f"Creating email with data items of length: {len(self.dataframe)}")
 
         return Mail(
-            to_emails=to_email,
+            to_emails=self.generate_recipients(),
             from_email=Email(from_email, "Christopher Philp"),
             subject=subject,
             html_content=message_text
         )
+
+    @staticmethod
+    def generate_recipients():
+        recipients = []
+        for email in str(to_email).split(","):
+            recipients.append(Email(email))
 
     @staticmethod
     def authenticate():
