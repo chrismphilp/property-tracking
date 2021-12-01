@@ -23,7 +23,7 @@ class EmailSender:
         self.send_email()
 
     def send_email(self):
-        logging.info(f"Sending email")
+        logging.info(f"Processing email with {len(self.dataframe)} items")
 
         if len(self.dataframe) > 0:
             try:

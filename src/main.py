@@ -37,7 +37,7 @@ g = Github(GITHUB_ACCESS_TOKEN)
 @app.route('/')
 def main():
     repo = g.get_user().get_repo(repository_name)
-    today = dt.datetime.now().strftime("%d/%m/%Y")
+    today = dt.datetime.now().strftime("%Y/%m/%d")
 
     todays_rightmove_houses = process_rightmove_csv(repo, today)
     todays_zooplas_houses = process_zoopla_csv(repo, today)
