@@ -4,7 +4,6 @@ import google.auth
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Email, To
 from python_http_client.exceptions import HTTPError
-
 from google.cloud import secretmanager
 
 secrets = secretmanager.SecretManagerServiceClient()
@@ -38,13 +37,17 @@ class EmailSender:
     def create_email_text(self):
         email_message_start = "<table border='1' style='text-align: left; width:100%'>" \
                               "<tr>" \
+                              "<th>Index</th>" \
                               "<th>Address</th>" \
+                              "<th>Price</th>" \
                               "<th>Link</th>" \
                               "</tr>"
         content = ""
         for index, row in self.dataframe.iterrows():
             content += "<tr>" \
+                       f"<td>{index + 1}</td>" \
                        f"<td>{row['address']}</td>" \
+                       f"<td>{row['price']}</td>" \
                        f"<td><a href='{row['url']}'>{row['url']}</a></td>" \
                        "</tr>"
 
