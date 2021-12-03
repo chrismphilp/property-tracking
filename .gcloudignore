@@ -1,5 +1,15 @@
+# Python
+venv/
+
 # Git
 .gcloudignore
 .git
 .github/
 .gitignore
+
+# CSVs
+rightmove-houses.csv
+zoopla-houses.csv
+
+# Misc.
+README.md
