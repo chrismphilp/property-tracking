@@ -64,19 +64,17 @@ class EmailSender:
 
         return Mail(
             to_emails=self.generate_recipients(),
-            from_email=Email(from_email, "Christopher Philp"),
+            from_email=Email(self.from_email, "Christopher Philp"),
             subject=subject,
             html_content=message_text,
         )
 
-    @staticmethod
-    def generate_recipients():
+    def generate_recipients(self):
         recipients = []
-        for email in str(to_email).split(","):
+        for email in str(self.to_email).split(","):
             recipients.append(To(email))
         return recipients
 
-    @staticmethod
-    def authenticate():
+    def authenticate(self):
         logging.info(f"Authenticating user")
-        return SendGridAPIClient(sendgrid_api_key)
+        return SendGridAPIClient(self.sendgrid_api_key)
