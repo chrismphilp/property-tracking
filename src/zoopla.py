@@ -51,9 +51,12 @@ class ZooplaPropertiesForSale:
 
     def _request(self, index):
         self.url = self.create_url(index)
+
+        logging.info(f"Making request to {self.url}")
+
         r = requests.get(self.url)
         if r.status_code != 200:
-            raise ValueError('Cannot make request to rightmove.co.uk')
+            raise ValueError('Cannot make request to zoopla.co.uk')
         return r.content
 
     def process_results(self):
