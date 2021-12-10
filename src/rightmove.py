@@ -51,7 +51,7 @@ class RightmovePropertiesForSale:
 
         r = requests.get(self.url)
         if r.status_code != 200:
-            raise ValueError('Cannot make request to rightmove.co.uk')
+            raise ValueError(f"Cannot make request to rightmove.co.uk. Returned status: {r.status_code} with error: {r.headers, r.content}")
         return r.content
 
     def process_results(self):
