@@ -1,3 +1,4 @@
+import time
 import urllib.parse
 import logging
 import requests
@@ -96,6 +97,8 @@ class RightmovePropertiesForSale:
         results["added_on"] = results["added_on"].astype('str')
 
         results.sort_values("added_on", ascending=False, inplace=True)
+
+        time.sleep(1)
 
         return results
 

@@ -46,6 +46,11 @@ def main():
             RightmovePropertiesForSale(location_identifier='REGION^1017', radius_from_location=1, ).parse_site(),  # northwood
             RightmovePropertiesForSale(location_identifier='REGION^1154', radius_from_location=1, ).parse_site(),  # ruislip
             RightmovePropertiesForSale(location_identifier='REGION^79781', radius_from_location=0.5, ).parse_site(),  # harrow_on_the_hill
+            RightmovePropertiesForSale(location_identifier='REGION^896', radius_from_location=1, ).parse_site(),  # maidenhead
+            RightmovePropertiesForSale(location_identifier='REGION^311', radius_from_location=1, ).parse_site(),  # chesham
+            RightmovePropertiesForSale(location_identifier='REGION^36', radius_from_location=1, ).parse_site(),  # amersham
+            RightmovePropertiesForSale(location_identifier='REGION^5133', radius_from_location=1, ).parse_site(),  # burnham
+            RightmovePropertiesForSale(location_identifier='REGION^23997', radius_from_location=1, ).parse_site(),  # taplow
         ]),
         "rightmove-houses.csv",
         f"Updating rightmove-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}",
@@ -55,10 +60,15 @@ def main():
     todays_zooplas_houses = process_csv(
         repo,
         pd.concat([
-            ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, include_sstc=False).parse_site(),  # barnet
-            ZooplaPropertiesForSale(location_identifier='london/northwood', radius_from_location=1, include_sstc=False).parse_site(),  # northwood
-            ZooplaPropertiesForSale(location_identifier='ruislip', radius_from_location=1, include_sstc=False).parse_site(),  # ruislip
-            ZooplaPropertiesForSale(location_identifier='harrow-on-the-hill', radius_from_location=1, include_sstc=False).parse_site(),  # harrow-on-the-hill
+            ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, ).parse_site(),  # barnet
+            ZooplaPropertiesForSale(location_identifier='london/northwood', radius_from_location=1, ).parse_site(),  # northwood
+            ZooplaPropertiesForSale(location_identifier='ruislip', radius_from_location=1, ).parse_site(),  # ruislip
+            ZooplaPropertiesForSale(location_identifier='harrow-on-the-hill', radius_from_location=1, ).parse_site(),  # harrow-on-the-hill
+            ZooplaPropertiesForSale(location_identifier='maidenhead', radius_from_location=1, ).parse_site(),  # maidenhead
+            ZooplaPropertiesForSale(location_identifier='chesham', radius_from_location=1, ).parse_site(),  # chesham
+            ZooplaPropertiesForSale(location_identifier='amersham', radius_from_location=1, ).parse_site(),  # amersham
+            ZooplaPropertiesForSale(location_identifier='berkshire/burnham', radius_from_location=1, ).parse_site(),  # burnham
+            ZooplaPropertiesForSale(location_identifier='taplow', radius_from_location=1, ).parse_site(),  # taplow
         ]),
         "zoopla-houses.csv",
         f"Updating zoopla-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}",

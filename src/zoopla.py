@@ -1,3 +1,4 @@
+import time
 import urllib.parse
 import logging
 import requests
@@ -18,7 +19,7 @@ class ZooplaPropertiesForSale:
                  page_size: int = 25,
                  radius_from_location: int = 0,
                  property_type: [str] = 'houses',
-                 include_sstc: bool = True, ):
+                 include_sstc: bool = False, ):
         self.parser = Parser()
         self.base_url = 'https://www.zoopla.co.uk/for-sale'
         self.location_identifier = location_identifier
@@ -95,6 +96,9 @@ class ZooplaPropertiesForSale:
         results["added_on"] = results["added_on"].astype('str')
 
         results.sort_values("added_on", ascending=False, inplace=True)
+
+        time.sleep(1)
+
         return results
 
     def process_page(self):
