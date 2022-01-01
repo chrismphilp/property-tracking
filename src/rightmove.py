@@ -9,9 +9,13 @@ import pandas as pd
 
 from lxml import html
 from parse import Parser
+from fake_useragent import UserAgent
+
+ua = UserAgent()
 
 
 class RightmovePropertiesForSale:
+    headers = {'User-Agent': ua.random, 'Accept-Language': 'en-gb', 'Referer': 'https://www.google.com/'}
 
     def __init__(self, location_identifier: str,
                  min_price: int = 250_000,
@@ -50,7 +54,7 @@ class RightmovePropertiesForSale:
 
         logging.info(f"Making request to {self.url}")
 
-        r = requests.get(self.url)
+        r = requests.get(self.url, headers=self.headers)
         if r.status_code != 200:
             raise ValueError(f"Cannot make request to rightmove.co.uk. Returned status: {r.status_code} with error: {r.headers, r.content}")
         return r.content
