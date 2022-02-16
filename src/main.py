@@ -37,9 +37,9 @@ g = Github(GITHUB_ACCESS_TOKEN)
 @app.route('/')
 def main():
     repo = g.get_user().get_repo(repository_name)
-    today = dt.datetime.now().strftime("%Y-%m-%d")
+    yesterday = (dt.datetime.now() - dt.timedelta(days=1)).strftime("%Y-%m-%d")
 
-    todays_rightmove_houses = process_csv(
+    yesterdays_rightmove_houses = process_csv(
         repo,
         pd.concat([
             RightmovePropertiesForSale(location_identifier='REGION^93929', radius_from_location=0, ).parse_site(),  # barnet
@@ -54,10 +54,10 @@ def main():
         ]),
         "rightmove-houses.csv",
         f"Updating rightmove-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}",
-        today
+        yesterday
     )
 
-    todays_zooplas_houses = process_csv(
+    yesterdays_zoopla_houses = process_csv(
         repo,
         pd.concat([
             ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, ).parse_site(),  # barnet
@@ -72,16 +72,16 @@ def main():
         ]),
         "zoopla-houses.csv",
         f"Updating zoopla-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}",
-        today
+        yesterday
     )
 
     # Send email
-    EmailSender(pd.concat([todays_rightmove_houses, todays_zooplas_houses]))
+    EmailSender(pd.concat([yesterdays_rightmove_houses, yesterdays_zoopla_houses]))
 
     return '', 200, {}
 
 
-def process_csv(repo, new_properties, path, commit_message, today):
+def process_csv(repo, new_properties, path, commit_message, yesterday):
     repo_csv = repo.get_contents(path)
     csv = pd.concat([pd.read_csv(BytesIO(repo_csv.decoded_content)), new_properties])
 
@@ -90,13 +90,13 @@ def process_csv(repo, new_properties, path, commit_message, today):
     csv["added_on"] = csv["added_on"].astype('str')
 
     csv = csv.drop_duplicates(subset=csv.columns.difference(["search_datetime", "added_on"]), keep="first")
-    todays_properties = csv.loc[csv["added_on"] == today]
+    yesterdays_properties = csv.loc[csv["added_on"] == yesterday]
 
-    zoopla_csv = csv.to_csv(index=False)
+    csv_format = csv.to_csv(index=False)
 
-    repo.update_file(path=path, message=commit_message, content=bytes(zoopla_csv, encoding='utf-8'), sha=repo_csv.sha)
+    repo.update_file(path=path, message=commit_message, content=bytes(csv_format, encoding='utf-8'), sha=repo_csv.sha)
 
-    return todays_properties
+    return yesterdays_properties
 
 
 @app.route('/_ah/warmup')
