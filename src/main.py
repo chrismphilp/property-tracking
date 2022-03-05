@@ -51,6 +51,7 @@ def main():
             RightmovePropertiesForSale(location_identifier='REGION^36', radius_from_location=1, ).parse_site(),  # amersham
             RightmovePropertiesForSale(location_identifier='REGION^5133', radius_from_location=1, ).parse_site(),  # burnham
             RightmovePropertiesForSale(location_identifier='REGION^23997', radius_from_location=1, ).parse_site(),  # taplow
+            RightmovePropertiesForSale(location_identifier='REGION^1070', radius_from_location=0, ).parse_site(),  # pinner
         ]),
         "rightmove-houses.csv",
         f"Updating rightmove-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}",
@@ -69,6 +70,7 @@ def main():
             ZooplaPropertiesForSale(location_identifier='amersham', radius_from_location=1, ).parse_site(),  # amersham
             ZooplaPropertiesForSale(location_identifier='berkshire/burnham', radius_from_location=1, ).parse_site(),  # burnham
             ZooplaPropertiesForSale(location_identifier='taplow', radius_from_location=1, ).parse_site(),  # taplow
+            ZooplaPropertiesForSale(location_identifier='pinner', radius_from_location=0, ).parse_site(),  # pinner
         ]),
         "zoopla-houses.csv",
         f"Updating zoopla-houses.csv - {dt.datetime.now().strftime('%d/%m/%Y')}",
