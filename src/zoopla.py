@@ -19,7 +19,7 @@ class ZooplaPropertiesForSale:
 
     def __init__(self, location_identifier: str,
                  min_price: int = 250_000,
-                 max_price: int = 550_000,
+                 max_price: int = 595_000,
                  page_size: int = 25,
                  radius_from_location: int = 0,
                  property_type: [str] = 'houses',
