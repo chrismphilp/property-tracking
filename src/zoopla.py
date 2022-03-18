@@ -113,7 +113,7 @@ class ZooplaPropertiesForSale:
         //h2[@data-testid="listing-title"]/text()"""
         xp_prices = """//div[@data-testid="search-result"]
         //div[contains(@class, 'css-qmlb99-CardHeader')]
-        //p[contains(@class, 'css-1o565rw-Text')]/text()"""
+        //p[contains(@class, 'css-xz7r6w-Price')]/text()"""
         xp_addresses = """//div[@data-testid="search-result"]
         //p[@data-testid="listing-description"]/text()"""
         xp_weblinks = """//div[@data-testid="search-result"]
