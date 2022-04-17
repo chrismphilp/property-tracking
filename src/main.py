@@ -1,5 +1,6 @@
 import os
 
+import pytz
 import datetime as dt
 import pandas as pd
 import google.cloud.logging
@@ -37,7 +38,9 @@ g = Github(GITHUB_ACCESS_TOKEN)
 @app.route('/')
 def main():
     repo = g.get_user().get_repo(repository_name)
-    yesterday = (dt.datetime.now() - dt.timedelta(days=1)).strftime("%Y-%m-%d")
+
+    london_tzinfo = pytz.timezone("Europe/London")
+    yesterday = (dt.datetime.now(dt.timezone.utc).astimezone(london_tzinfo) - dt.timedelta(days=1)).strftime("%Y-%m-%d")
 
     yesterdays_rightmove_houses = process_csv(
         repo,
