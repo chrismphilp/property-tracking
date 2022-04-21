@@ -41,8 +41,8 @@ class RightmovePropertiesForSale:
         url_vars = {
             "index": index,
             "locationIdentifier": self.location_identifier,
-            "minPrice": self.min_price,
             "maxPrice": self.max_price,
+            "minPrice": self.min_price,
             "radius": self.radius_from_location,
             "primaryDisplayPropertyType": self.property_type,
             "includeSSTC": self.include_sstc,
