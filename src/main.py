@@ -45,7 +45,7 @@ def main():
     yesterdays_rightmove_houses = process_csv(
         repo,
         pd.concat([
-            RightmovePropertiesForSale(location_identifier='REGION^93929', radius_from_location=0, ).parse_site(),  # barnet
+            RightmovePropertiesForSale(location_identifier='REGION^93929', radius_from_location=1, ).parse_site(),  # barnet
             RightmovePropertiesForSale(location_identifier='REGION^1017', radius_from_location=1, ).parse_site(),  # northwood
             RightmovePropertiesForSale(location_identifier='REGION^1154', radius_from_location=1, ).parse_site(),  # ruislip
             RightmovePropertiesForSale(location_identifier='REGION^79781', radius_from_location=0.5, ).parse_site(),  # harrow_on_the_hill
@@ -64,7 +64,7 @@ def main():
     yesterdays_zoopla_houses = process_csv(
         repo,
         pd.concat([
-            ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=0, ).parse_site(),  # barnet
+            ZooplaPropertiesForSale(location_identifier='barnet-london-borough', radius_from_location=1, ).parse_site(),  # barnet
             ZooplaPropertiesForSale(location_identifier='london/northwood', radius_from_location=1, ).parse_site(),  # northwood
             ZooplaPropertiesForSale(location_identifier='ruislip', radius_from_location=1, ).parse_site(),  # ruislip
             ZooplaPropertiesForSale(location_identifier='harrow-on-the-hill', radius_from_location=1, ).parse_site(),  # harrow-on-the-hill
@@ -88,7 +88,7 @@ def main():
 
 def process_csv(repo, new_properties, path, commit_message, yesterday):
     repo_csv = repo.get_contents(path)
-    csv = pd.concat([pd.read_csv(BytesIO(repo_csv.decoded_content)), new_properties])
+    csv = pd.concat([pd.read_csv(BytesIO(repo_csv.decoded_content), encoding="utf-8"), new_properties])
 
     csv['added_on'] = pd.to_datetime(csv['added_on'], dayfirst=True)
     csv = csv.sort_values("added_on", ascending=False)
