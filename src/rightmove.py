@@ -18,8 +18,8 @@ class RightmovePropertiesForSale:
     headers = {'User-Agent': ua.random, 'Accept-Language': 'en-gb', 'Referer': 'https://www.google.com/'}
 
     def __init__(self, location_identifier: str,
-                 min_price: int = 250_000,
-                 max_price: int = 595_000,
+                 min_price: int = 375_000,
+                 max_price: int = 650_000,
                  radius_from_location: float = 0,
                  property_type: [str] = 'houses',
                  include_sstc: bool = True):
