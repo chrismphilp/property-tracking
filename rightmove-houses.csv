@@ -550,9 +550,7 @@ price,type,address,url,added_on,search_datetime,postcode,number_bedrooms
 275000.0,1 bedroom semi-detached house for sale,"Aycliffe Road, Borehamwood",https://www.rightmove.co.uk/properties/85591560#/?channel=RES_BUY,2022-07-12,"05:05AM on July 13, 2022",,1.0
 430000.0,3 bedroom semi-detached house for sale,"St Andrews Way, Cippenham",https://www.rightmove.co.uk/properties/85787355#/?channel=RES_BUY,2022-07-12,"05:05AM on August 07, 2022",,3.0
 550000.0,3 bedroom semi-detached house for sale,"Larkway Close, Kingsbury, NW9",https://www.rightmove.co.uk/properties/124124213#/?channel=RES_BUY,2022-07-12,"05:05AM on August 07, 2022",NW9,3.0
-312000.0,1 bedroom detached house for sale,"Headstone Drive,
-Harrow,
-HA1 4TY",https://www.rightmove.co.uk/properties/124894955#/?channel=RES_BUY,2022-07-12,"05:05AM on August 04, 2022",HA1,1.0
+312000.0,1 bedroom detached house for sale,"Headstone Drive,Harrow,HA1 4TY",https://www.rightmove.co.uk/properties/124894955#/?channel=RES_BUY,2022-07-12,"05:05AM on August 04, 2022",HA1,1.0
 425000.0,3 bedroom terraced house for sale,"Cameron Road,Chesham,HP5 3BS",https://www.rightmove.co.uk/properties/124890569#/?channel=RES_BUY,2022-07-12,"05:05AM on August 07, 2022",HP5,3.0
 440000.0,3 bedroom detached house for sale,"Bader Gardens, Slough",https://www.rightmove.co.uk/properties/124875965#/?channel=RES_BUY,2022-07-12,"05:05AM on August 07, 2022",,3.0
 430000.0,3 bedroom semi-detached house for sale,"Lytham Avenue, Watford",https://www.rightmove.co.uk/properties/85455939#/?channel=RES_BUY,2022-07-12,"05:05AM on August 05, 2022",,3.0
@@ -601,10 +599,7 @@ HA1 4TY",https://www.rightmove.co.uk/properties/124894955#/?channel=RES_BUY,2022
 600000.0,3 bedroom terraced house for sale,Lower Road - Cookham Character Cottage,https://www.rightmove.co.uk/properties/123773813#/?channel=RES_BUY,2022-07-11,"05:05AM on August 08, 2022",,3.0
 625000.0,3 bedroom semi-detached house for sale,"Coombe Drive, Ruislip, Middlesex, HA4",https://www.rightmove.co.uk/properties/118575458#/?channel=RES_BUY,2022-07-11,"05:05AM on August 08, 2022",HA4,3.0
 500000.0,3 bedroom terraced house for sale,"South Park Way, Ruislip, Middlesex, HA4",https://www.rightmove.co.uk/properties/85766559#/?channel=RES_BUY,2022-07-11,"05:05AM on August 08, 2022",HA4,3.0
-595000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/85745757#/?channel=RES_BUY,2022-07-11,"05:05AM on July 18, 2022",HA8,2.0
+595000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/85745757#/?channel=RES_BUY,2022-07-11,"05:05AM on July 18, 2022",HA8,2.0
 500000.0,3 bedroom semi-detached house for sale,"Furrow Way, Maidenhead, SL6",https://www.rightmove.co.uk/properties/85771212#/?channel=RES_BUY,2022-07-11,"05:05AM on August 03, 2022",SL6,3.0
 600000.0,3 bedroom semi-detached house for sale,"Potters Bar, Hertsmere, EN6",https://www.rightmove.co.uk/properties/85746462#/?channel=RES_BUY,2022-07-11,"05:05AM on August 08, 2022",EN6,3.0
 500000.0,3 bedroom terraced house for sale,"Prestwick Road, South Oxhey",https://www.rightmove.co.uk/properties/124849694#/?channel=RES_BUY,2022-07-10,"05:05AM on August 07, 2022",,3.0
@@ -754,19 +749,10 @@ HA8 8JP
 329000.0,2 bedroom end of terrace house for sale,Cippenham - Scope To Extend,https://www.rightmove.co.uk/properties/124606727#/?channel=RES_BUY,2022-07-04,"05:05AM on August 06, 2022",,2.0
 490000.0,3 bedroom terraced house for sale,"Stonefield Park, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/124621277#/?channel=RES_BUY,2022-07-04,"05:05AM on August 06, 2022",SL6,3.0
 395000.0,3 bedroom end of terrace house for sale,"Pearl Gardens, Cippenham",https://www.rightmove.co.uk/properties/124607033#/?channel=RES_BUY,2022-07-04,"05:05AM on July 25, 2022",,3.0
-595000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/124621982#/?channel=RES_BUY,2022-07-04,"05:05AM on July 10, 2022",HA8,2.0
-595000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/124621979#/?channel=RES_BUY,2022-07-04,"05:05AM on July 10, 2022",HA8,2.0
+595000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/124621982#/?channel=RES_BUY,2022-07-04,"05:05AM on July 10, 2022",HA8,2.0
+595000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/124621979#/?channel=RES_BUY,2022-07-04,"05:05AM on July 10, 2022",HA8,2.0
 420000.0,4 bedroom semi-detached house for sale,"Altwood Road, Maidenhead, Berkshire",https://www.rightmove.co.uk/properties/85406595#/?channel=RES_BUY,2022-07-04,"05:05AM on July 27, 2022",,4.0
-595000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/124621982#/?channel=RES_BUY,2022-07-04,"12:53PM on July 09, 2022",HA8,2.0
+595000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/124621982#/?channel=RES_BUY,2022-07-04,"12:53PM on July 09, 2022",HA8,2.0
 530000.0,2 bedroom terraced house for sale,"Brixham Crescent, Ruislip, Middlesex, HA4",https://www.rightmove.co.uk/properties/124616873#/?channel=RES_BUY,2022-07-04,"05:05AM on August 08, 2022",HA4,2.0
 650000.0,3 bedroom semi-detached house for sale,"Woodlands Avenue, Ruislip",https://www.rightmove.co.uk/properties/124612103#/?channel=RES_BUY,2022-07-04,"05:05AM on August 08, 2022",,3.0
 650000.0,3 bedroom semi-detached house for sale,"Ridding Lane, Greenford",https://www.rightmove.co.uk/properties/124618481#/?channel=RES_BUY,2022-07-04,"05:05AM on August 08, 2022",,3.0
@@ -777,10 +763,7 @@ HA8 8JP
 575000.0,3 bedroom detached house for sale,"Meadfield, Edgware",https://www.rightmove.co.uk/properties/124616186#/?channel=RES_BUY,2022-07-04,"05:05AM on August 08, 2022",,3.0
 500000.0,3 bedroom terraced house for sale,"Springway, Harrow",https://www.rightmove.co.uk/properties/124629116#/?channel=RES_BUY,2022-07-04,"05:05AM on August 07, 2022",,3.0
 600000.0,3 bedroom terraced house for sale,Heath Road ,https://www.rightmove.co.uk/properties/124647749#/?channel=RES_BUY,2022-07-04,"05:05AM on August 08, 2022",,3.0
-595000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/124621979#/?channel=RES_BUY,2022-07-04,"12:53PM on July 09, 2022",HA8,2.0
+595000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/124621979#/?channel=RES_BUY,2022-07-04,"12:53PM on July 09, 2022",HA8,2.0
 550000.0,3 bedroom terraced house for sale,"Wolseley Road, HARROW",https://www.rightmove.co.uk/properties/124631186#/?channel=RES_BUY,2022-07-04,"05:05AM on July 27, 2022",,3.0
 350000.0,3 bedroom terraced house for sale,"3 Bexhill Road, Arnos Grove, London N11 2RG",https://www.rightmove.co.uk/properties/124655300#/?channel=RES_BUY,2022-07-04,"05:05AM on July 21, 2022",N11,3.0
 250000.0,1 bedroom terraced house for sale,"Harkness Road, Burnham",https://www.rightmove.co.uk/properties/115545776#/?channel=RES_BUY,2022-07-04,"05:05AM on August 06, 2022",,1.0
@@ -1241,9 +1224,7 @@ HA8 8JP
 584999.0,4 bedroom town house for sale,"Huntercombe Lane North, Taplow",https://www.rightmove.co.uk/properties/122828468#/?channel=RES_BUY,2022-06-10,"05:05AM on July 29, 2022",,4.0
 449950.0,3 bedroom terraced house for sale,"Long Furlong Drive, Slough",https://www.rightmove.co.uk/properties/85565589#/?channel=RES_BUY,2022-06-10,"05:07AM on June 22, 2022",,3.0
 470000.0,2 bedroom terraced house for sale,"Pages Cottages, Ducks Hill Road, Ruislip, HA4",https://www.rightmove.co.uk/properties/85572009#/?channel=RES_BUY,2022-06-10,"05:05AM on June 22, 2022",HA4,2.0
-474000.0,2 bedroom detached house for sale,"Headstone Drive,
-Harrow,
-HA1 4TY",https://www.rightmove.co.uk/properties/85605222#/?channel=RES_BUY,2022-06-10,"05:06AM on June 22, 2022",HA1,2.0
+474000.0,2 bedroom detached house for sale,"Headstone Drive,Harrow,HA1 4TY",https://www.rightmove.co.uk/properties/85605222#/?channel=RES_BUY,2022-06-10,"05:06AM on June 22, 2022",HA1,2.0
 530000.0,3 bedroom terraced house for sale,"Rugby Avenue, Greenford",https://www.rightmove.co.uk/properties/123185966#/?channel=RES_BUY,2022-06-10,"05:06AM on June 21, 2022",,3.0
 425000.0,2 bedroom end of terrace house for sale,"Boleyn Way, Barnet, Hertfordshire, EN5",https://www.rightmove.co.uk/properties/108492239#/?channel=RES_BUY,2022-06-09,"05:06AM on June 13, 2022",EN5,2.0
 565000.0,3 bedroom semi-detached house for sale,"Vivian Close, WD19",https://www.rightmove.co.uk/properties/123849581#/?channel=RES_BUY,2022-06-09,"05:05AM on July 12, 2022",WD19,3.0
@@ -1331,8 +1312,7 @@ HA1 4TY",https://www.rightmove.co.uk/properties/85605222#/?channel=RES_BUY,2022-
 500000.0,2 bedroom flat for sale,"London Road, Harrow, HA1",https://www.rightmove.co.uk/properties/123904616#/?channel=RES_BUY,2022-06-06,"05:06AM on June 08, 2022",HA1,2.0
 550000.0,2 bedroom flat for sale,"Caddington Road, Childs Hill, London, NW2 1RP",https://www.rightmove.co.uk/properties/123904598#/?channel=RES_BUY,2022-06-06,"05:05AM on June 08, 2022",NW2,2.0
 499950.0,3 bedroom semi-detached house for sale,"St Georges Crescent, Cippenham",https://www.rightmove.co.uk/properties/123904019#/?channel=RES_BUY,2022-06-06,"05:05AM on July 11, 2022",,3.0
-,3 bedroom apartment for sale,"Moorbridge Court, Maidenhead,
-SL6 8LT",https://www.rightmove.co.uk/properties/123895949#/?channel=RES_BUY,2022-06-06,"05:05AM on June 07, 2022",SL6,3.0
+,3 bedroom apartment for sale,"Moorbridge Court, Maidenhead,SL6 8LT",https://www.rightmove.co.uk/properties/123895949#/?channel=RES_BUY,2022-06-06,"05:05AM on June 07, 2022",SL6,3.0
 405000.0,2 bedroom end of terrace house for sale," Whelpley Hill, HP5",https://www.rightmove.co.uk/properties/123872036#/?channel=RES_BUY,2022-06-06,"05:05AM on June 15, 2022",HP5,2.0
 550000.0,2 bedroom house for sale,"Victoria Road EN4 9PF, New Barnet, EN4",https://www.rightmove.co.uk/properties/123897317#/?channel=RES_BUY,2022-06-06,"05:05AM on July 29, 2022",EN4,2.0
 550000.0,3 bedroom terraced house for sale,"Heath Road, Harrow, Middlesex, HA1",https://www.rightmove.co.uk/properties/123907901#/?channel=RES_BUY,2022-06-06,"05:05AM on August 05, 2022",HA1,3.0
@@ -1363,7 +1343,7 @@ SL6 8LT",https://www.rightmove.co.uk/properties/123895949#/?channel=RES_BUY,2022
 450000.0,2 bedroom terraced house for sale,"Royal Crescent, Ruislip, HA4",https://www.rightmove.co.uk/properties/121503803#/?channel=RES_BUY,2022-06-04,"05:06AM on June 19, 2022",HA4,2.0
 450000.0,3 bedroom terraced house for sale,"Eastcote Avenue, South Harrow, HA2 8AL",https://www.rightmove.co.uk/properties/115657364#/?channel=RES_BUY,2022-06-04,"05:06AM on June 16, 2022",HA2,3.0
 450000.0,3 bedroom terraced house for sale,"Lynhurst Road, Hillingdon, UB10",https://www.rightmove.co.uk/properties/122773061#/?channel=RES_BUY,2022-06-04,"05:05AM on June 06, 2022",UB10,3.0
-450000.0,Plot for sale,"Kings Road, Harrow",https://www.rightmove.co.uk/properties/121733489#/?channel=COM_BUY,2022-06-04,"05:06AM on June 22, 2022",,
+450000.0,Plot for sale,"Kings Road, Harrow",https://www.rightmove.co.uk/properties/121733489#/?channel=COM_BUY,2022-06-04,"05:06AM on June 22, 2022",,1.0
 450000.0,2 bedroom terraced house for sale,"Ladygate Lane, Ruislip",https://www.rightmove.co.uk/properties/121041992#/?channel=RES_BUY,2022-06-04,"05:05AM on June 10, 2022",,2.0
 450000.0,2 bedroom end of terrace house for sale,"Clyfford Road, Ruislip, HA4",https://www.rightmove.co.uk/properties/123853001#/?channel=RES_BUY,2022-06-04,"05:05AM on July 12, 2022",HA4,2.0
 365000.0,2 bedroom detached house for sale,"Charcot Road, London",https://www.rightmove.co.uk/properties/123854234#/?channel=RES_BUY,2022-06-04,"05:06AM on June 21, 2022",,2.0
@@ -1496,9 +1476,7 @@ SL6 8LT",https://www.rightmove.co.uk/properties/123895949#/?channel=RES_BUY,2022
 650000.0,4 bedroom link detached house for sale,"Revesby Close, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/96622561#/?channel=RES_BUY,2022-05-30,"05:05AM on August 08, 2022",SL6,4.0
 600000.0,4 bedroom semi-detached house for sale,"Littlefield Green, Maidenhead",https://www.rightmove.co.uk/properties/123175499#/?channel=RES_BUY,2022-05-30,"05:05AM on August 08, 2022",,4.0
 425000.0,2 bedroom semi-detached house for sale," Averil Court, Taplow, SL6",https://www.rightmove.co.uk/properties/123788615#/?channel=RES_BUY,2022-05-29,"05:05AM on August 08, 2022",SL6,2.0
-313000.0,1 bedroom apartment for sale,"Headstone Drive,
-Harrow,
-HA1 4TY",https://www.rightmove.co.uk/properties/123790943#/?channel=RES_BUY,2022-05-29,"05:05AM on June 01, 2022",HA1,1.0
+313000.0,1 bedroom apartment for sale,"Headstone Drive,Harrow,HA1 4TY",https://www.rightmove.co.uk/properties/123790943#/?channel=RES_BUY,2022-05-29,"05:05AM on June 01, 2022",HA1,1.0
 525000.0,3 bedroom terraced house for sale,"Spencers Lane, Cookham No chain",https://www.rightmove.co.uk/properties/122246711#/?channel=RES_BUY,2022-05-28,"05:05AM on August 08, 2022",,3.0
 475000.0,3 bedroom end of terrace house for sale,"Newbury Close, Northolt, Middlesex, UB5",https://www.rightmove.co.uk/properties/123099332#/?channel=RES_BUY,2022-05-28,"05:05AM on August 08, 2022",UB5,3.0
 375000.0,2 bedroom terraced house for sale,"Chesham, Buckinghamshire, HP5",https://www.rightmove.co.uk/properties/123535565#/?channel=RES_BUY,2022-05-28,"05:05AM on August 08, 2022",HP5,2.0
@@ -1512,9 +1490,7 @@ HA1 4TY",https://www.rightmove.co.uk/properties/123790943#/?channel=RES_BUY,2022
 575000.0,3 bedroom detached house for sale,"St Peter&#39;s Close, Burnham",https://www.rightmove.co.uk/properties/123774812#/?channel=RES_BUY,2022-05-28,"05:07AM on June 01, 2022",,3.0
 600000.0,3 bedroom semi-detached house for sale,"West End Road, Ruislip, HA4",https://www.rightmove.co.uk/properties/123776144#/?channel=RES_BUY,2022-05-28,"05:05AM on August 08, 2022",HA4,3.0
 535000.0,2 bedroom terraced house for sale,"Talbot Road, Rickmansworth, WD3",https://www.rightmove.co.uk/properties/123749564#/?channel=RES_BUY,2022-05-27,"05:05AM on August 08, 2022",WD3,2.0
-405000.0,3 bedroom apartment for sale,"Clivemont Road,
-Maidenhead,
-SL6",https://www.rightmove.co.uk/properties/123739535#/?channel=RES_BUY,2022-05-27,"05:05AM on June 07, 2022",SL6,3.0
+405000.0,3 bedroom apartment for sale,"Clivemont Road,Maidenhead,SL6",https://www.rightmove.co.uk/properties/123739535#/?channel=RES_BUY,2022-05-27,"05:05AM on June 07, 2022",SL6,3.0
 575000.0,3 bedroom end of terrace house for sale,"Warden Avenue, Harrow, Middlesex, HA2",https://www.rightmove.co.uk/properties/123767000#/?channel=RES_BUY,2022-05-27,"05:05AM on August 08, 2022",HA2,3.0
 440000.0,3 bedroom terraced house for sale,"Pheasants Croft, Maidenhead, Berkshire",https://www.rightmove.co.uk/properties/123731261#/?channel=RES_BUY,2022-05-27,"05:05AM on August 08, 2022",,3.0
 500000.0,3 bedroom semi-detached house for sale,"Lillibrooke Crescent, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/123727049#/?channel=RES_BUY,2022-05-27,"05:05AM on August 08, 2022",SL6,3.0
@@ -1579,10 +1555,7 @@ SL6",https://www.rightmove.co.uk/properties/123741239#/?channel=RES_BUY,2022-05-
 545000.0,2 bedroom apartment for sale,"College Road, Harrow, Middlesex, HA1",https://www.rightmove.co.uk/properties/123645626#/?channel=RES_BUY,2022-05-25,"05:06AM on June 08, 2022",HA1,2.0
 450000.0,3 bedroom end of terrace house for sale,"Slough, Berkshire, SL2",https://www.rightmove.co.uk/properties/121779923#/?channel=RES_BUY,2022-05-25,"05:05AM on August 08, 2022",SL2,3.0
 300000.0,2 bedroom end of terrace house for sale,"Wolsey Grove, Edgware",https://www.rightmove.co.uk/properties/123669392#/?channel=RES_BUY,2022-05-25,"05:06AM on May 26, 2022",,2.0
-315000.0,1 bedroom apartment for sale,"Watermark Maidenhead Marketing Suite, 
-St Ives Road,
-Maidenhead, 
-SL6 1SF",https://www.rightmove.co.uk/properties/123670250#/?channel=RES_BUY,2022-05-25,"05:05AM on June 08, 2022",SL6,1.0
+315000.0,1 bedroom apartment for sale,"Watermark Maidenhead Marketing Suite, St Ives Road,Maidenhead, SL6 1SF",https://www.rightmove.co.uk/properties/123670250#/?channel=RES_BUY,2022-05-25,"05:05AM on June 08, 2022",SL6,1.0
 600000.0,3 bedroom semi-detached house for sale,"Townson Avenue, Northolt",https://www.rightmove.co.uk/properties/123661652#/?channel=RES_BUY,2022-05-25,"05:05AM on August 08, 2022",,3.0
 590000.0,3 bedroom semi-detached house for sale,"Edwards Avenue, Ruislip, Middlesex, HA4",https://www.rightmove.co.uk/properties/123649226#/?channel=RES_BUY,2022-05-25,"05:06AM on June 10, 2022",HA4,3.0
 570000.0,2 bedroom property for sale,"Sphinx Way, Barnet",https://www.rightmove.co.uk/properties/123642320#/?channel=RES_BUY,2022-05-25,"05:06AM on May 26, 2022",,2.0
@@ -1634,10 +1607,7 @@ SL6 1SF",https://www.rightmove.co.uk/properties/123670250#/?channel=RES_BUY,2022
 400000.0,2 bedroom terraced house for sale,"Rabournmead Drive, Northolt, Middlesex, UB5",https://www.rightmove.co.uk/properties/123626306#/?channel=RES_BUY,2022-05-24,"05:06AM on May 25, 2022",UB5,2.0
 575000.0,4 bedroom terraced house for sale,"Wyeth Close, Taplow, Maidenhead",https://www.rightmove.co.uk/properties/123259982#/?channel=RES_BUY,2022-05-24,"05:07AM on June 22, 2022",,4.0
 449500.0,3 bedroom detached house for sale,"Richards Way, Cippenham",https://www.rightmove.co.uk/properties/123624413#/?channel=RES_BUY,2022-05-24,"05:05AM on June 10, 2022",,3.0
-595000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/96595870#/?channel=RES_BUY,2022-05-24,"05:06AM on May 30, 2022",HA8,2.0
+595000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/96595870#/?channel=RES_BUY,2022-05-24,"05:06AM on May 30, 2022",HA8,2.0
 485000.0,2 bedroom terraced house for sale,"BARNET, EN4",https://www.rightmove.co.uk/properties/96609673#/?channel=RES_BUY,2022-05-24,"05:06AM on May 26, 2022",EN4,2.0
 359950.0,2 bedroom terraced house for sale,Northwood,https://www.rightmove.co.uk/properties/123618548#/?channel=RES_BUY,2022-05-24,"05:07AM on August 01, 2022",,2.0
 425000.0,2 bedroom apartment for sale,"Bletchley House, 1 Flowers Avenue, Ruislip",https://www.rightmove.co.uk/properties/123621323#/?channel=RES_BUY,2022-05-24,"05:05AM on May 31, 2022",,2.0
@@ -1843,10 +1813,7 @@ HA8 8JP
 450000.0,2 bedroom terraced house for sale,"Abbots Road, HA8",https://www.rightmove.co.uk/properties/85334994#/?channel=RES_BUY,2022-05-17,"05:05AM on August 02, 2022",HA8,2.0
 390000.0,2 bedroom apartment for sale,"Grosvenor Drive, Maidenhead",https://www.rightmove.co.uk/properties/85318794#/?channel=RES_BUY,2022-05-17,"05:05AM on June 07, 2022",,2.0
 475000.0,3 bedroom end of terrace house for sale,"Croxdale Road, Borehamwood",https://www.rightmove.co.uk/properties/123232832#/?channel=RES_BUY,2022-05-17,"05:05AM on July 12, 2022",,3.0
-370000.0,2 bedroom apartment for sale,"Huntercombe Walk,
-Taplow, 
-Buckinghamshire, 
-SL6 0PQ",https://www.rightmove.co.uk/properties/85311531#/?channel=RES_BUY,2022-05-17,"05:07AM on May 25, 2022",SL6,2.0
+370000.0,2 bedroom apartment for sale,"Huntercombe Walk,Taplow, Buckinghamshire, SL6 0PQ",https://www.rightmove.co.uk/properties/85311531#/?channel=RES_BUY,2022-05-17,"05:07AM on May 25, 2022",SL6,2.0
 535000.0,3 bedroom terraced house for sale,"Crown Street,  Harrow on the Hill, HA2",https://www.rightmove.co.uk/properties/118541930#/?channel=RES_BUY,2022-05-17,"05:05AM on July 20, 2022",HA2,3.0
 550000.0,2 bedroom flat for sale,"Hoop Lane, NW11",https://www.rightmove.co.uk/properties/85309335#/?channel=RES_BUY,2022-05-17,"05:06AM on June 01, 2022",NW11,2.0
 375000.0,1 bedroom apartment for sale,"Perceval Square, HARROW",https://www.rightmove.co.uk/properties/122608085#/?channel=RES_BUY,2022-05-17,"05:05AM on June 01, 2022",,1.0
@@ -2242,9 +2209,7 @@ SL6 0PQ",https://www.rightmove.co.uk/properties/85311531#/?channel=RES_BUY,2022-
 600000.0,3 bedroom terraced house for sale,"Lavender Avenue, Kingsbury, NW9",https://www.rightmove.co.uk/properties/122916407#/?channel=RES_BUY,2022-04-29,"05:05AM on August 08, 2022",NW9,3.0
 475000.0,3 bedroom semi-detached house for sale,"Marina Way, Cippenham, Slough",https://www.rightmove.co.uk/properties/122904416#/?channel=RES_BUY,2022-04-28,"05:05AM on August 08, 2022",,3.0
 450000.0,3 bedroom terraced house for sale,"Perryman Way, Slough, SL2",https://www.rightmove.co.uk/properties/96611128#/?channel=RES_BUY,2022-04-28,"05:05AM on May 30, 2022",SL2,3.0
-545000.0,2 bedroom apartment for sale,"Eastbury Avenue,
-Northwood,
-HA6 3FL",https://www.rightmove.co.uk/properties/122656568#/?channel=RES_BUY,2022-04-28,"05:05AM on June 08, 2022",HA6,2.0
+545000.0,2 bedroom apartment for sale,"Eastbury Avenue,Northwood,HA6 3FL",https://www.rightmove.co.uk/properties/122656568#/?channel=RES_BUY,2022-04-28,"05:05AM on June 08, 2022",HA6,2.0
 475000.0,3 bedroom terraced house for sale,"Penyston Road, Maidenhead",https://www.rightmove.co.uk/properties/119102462#/?channel=RES_BUY,2022-04-28,"05:05AM on July 16, 2022",,3.0
 475000.0,3 bedroom terraced house for sale,"Beverley Gardens, Maidenhead",https://www.rightmove.co.uk/properties/122907362#/?channel=RES_BUY,2022-04-28,"05:05AM on August 08, 2022",,3.0
 600000.0,3 bedroom house for sale,"Constable Gardens, Edgware, HA8",https://www.rightmove.co.uk/properties/122626868#/?channel=RES_BUY,2022-04-28,"05:05AM on August 08, 2022",HA8,3.0
@@ -2254,9 +2219,7 @@ HA6 3FL",https://www.rightmove.co.uk/properties/122656568#/?channel=RES_BUY,2022
 650000.0,2 bedroom end of terrace house for sale,"Pembroke Mews, Muswell Hill, London, N10",https://www.rightmove.co.uk/properties/122904794#/?channel=RES_BUY,2022-04-28,"05:05AM on August 08, 2022",N10,2.0
 460000.0,2 bedroom semi-detached house for sale,"Gore Road, Burnham",https://www.rightmove.co.uk/properties/84948216#/?channel=RES_BUY,2022-04-28,"05:05AM on August 08, 2022",,2.0
 395000.0,2 bedroom flat for sale,"Hill View Court, 13 Bhamra Gardens, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/122895917#/?channel=RES_BUY,2022-04-28,"05:05AM on June 07, 2022",SL6,2.0
-460000.0,1 bedroom apartment for sale,"Eastbury Avenue,
-Northwood,
-HA6 3FL",https://www.rightmove.co.uk/properties/122657315#/?channel=RES_BUY,2022-04-28,"05:05AM on May 25, 2022",HA6,1.0
+460000.0,1 bedroom apartment for sale,"Eastbury Avenue,Northwood,HA6 3FL",https://www.rightmove.co.uk/properties/122657315#/?channel=RES_BUY,2022-04-28,"05:05AM on May 25, 2022",HA6,1.0
 525000.0,3 bedroom detached bungalow for sale,"Lower Cippenham Lane, Slough, Berkshire, SL1",https://www.rightmove.co.uk/properties/122882060#/?channel=RES_BUY,2022-04-28,"05:07AM on June 08, 2022",SL1,3.0
 449950.0,2 bedroom semi-detached bungalow for sale,Cippenham,https://www.rightmove.co.uk/properties/120637352#/?channel=RES_BUY,2022-04-28,"05:05AM on June 01, 2022",,2.0
 550000.0,3 bedroom terraced house for sale,"West Mead, Ruislip, Greater London, HA4",https://www.rightmove.co.uk/properties/122880551#/?channel=RES_BUY,2022-04-28,"05:05AM on August 08, 2022",HA4,3.0
@@ -2272,9 +2235,7 @@ HA6 3FL",https://www.rightmove.co.uk/properties/122657315#/?channel=RES_BUY,2022
 340000.0,2 bedroom terraced house for sale,"Red Lion Street, Chesham",https://www.rightmove.co.uk/properties/120913934#/?channel=RES_BUY,2022-04-28,"05:05AM on June 11, 2022",,2.0
 500000.0,3 bedroom end of terrace house for sale,"Church Road, Northolt UB5",https://www.rightmove.co.uk/properties/122873132#/?channel=RES_BUY,2022-04-28,"05:05AM on June 22, 2022",UB5,3.0
 500000.0,4 bedroom link detached house for sale,"Galahad Close, Cippenham",https://www.rightmove.co.uk/properties/84969534#/?channel=RES_BUY,2022-04-28,"05:05AM on May 25, 2022",,4.0
-465000.0,1 bedroom apartment for sale,"Eastbury Avenue,
-Northwood,
-HA6 3FL",https://www.rightmove.co.uk/properties/122657315#/?channel=RES_BUY,2022-04-28,"05:06AM on June 07, 2022",HA6,1.0
+465000.0,1 bedroom apartment for sale,"Eastbury Avenue,Northwood,HA6 3FL",https://www.rightmove.co.uk/properties/122657315#/?channel=RES_BUY,2022-04-28,"05:06AM on June 07, 2022",HA6,1.0
 450000.0,3 bedroom terraced house for sale,"Langham Road, Edgware",https://www.rightmove.co.uk/properties/84955416#/?channel=RES_BUY,2022-04-28,"05:05AM on August 07, 2022",,3.0
 450000.0,3 bedroom maisonette for sale,Northwood,https://www.rightmove.co.uk/properties/122287703#/?channel=RES_BUY,2022-04-28,"05:05AM on May 25, 2022",,3.0
 565000.0,2 bedroom apartment for sale,"Grove Road, Cockfosters, Hertfordshire, EN4",https://www.rightmove.co.uk/properties/122901098#/?channel=RES_BUY,2022-04-28,"05:05AM on May 25, 2022",EN4,2.0
@@ -2596,10 +2557,7 @@ HA6 3FL",https://www.rightmove.co.uk/properties/122657315#/?channel=RES_BUY,2022
 525000.0,2 bedroom end of terrace house for sale,"Clyfford Road, Ruislip, HA4",https://www.rightmove.co.uk/properties/122365187#/?channel=RES_BUY,2022-04-13,"12:05AM on April 25, 2022",HA4,2.0
 575000.0,3 bedroom semi-detached house for sale,"Broomgrove Gardens, Edgware",https://www.rightmove.co.uk/properties/122288126#/?channel=RES_BUY,2022-04-12,"05:05AM on August 08, 2022",,3.0
 500000.0,3 bedroom semi-detached house for sale,"Wardell Close, Mill Hill, London, NW7",https://www.rightmove.co.uk/properties/122303972#/?channel=RES_BUY,2022-04-12,"05:05AM on August 08, 2022",NW7,3.0
-370000.0,2 bedroom apartment for sale,"Huntercombe Walk,
-Taplow, 
-Buckinghamshire, 
-SL6 0PQ",https://www.rightmove.co.uk/properties/122319398#/?channel=RES_BUY,2022-04-12,"05:07AM on May 25, 2022",SL6,2.0
+370000.0,2 bedroom apartment for sale,"Huntercombe Walk,Taplow, Buckinghamshire, SL6 0PQ",https://www.rightmove.co.uk/properties/122319398#/?channel=RES_BUY,2022-04-12,"05:07AM on May 25, 2022",SL6,2.0
 500000.0,2 bedroom apartment for sale,"The Nutshell, River Road, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/122291885#/?channel=RES_BUY,2022-04-12,"05:05AM on May 30, 2022",SL6,2.0
 500000.0,3 bedroom detached house for sale,"Slough, Berkshire, SL2",https://www.rightmove.co.uk/properties/121876277#/?channel=RES_BUY,2022-04-12,"05:07AM on June 16, 2022",SL2,3.0
 500000.0,4 bedroom semi-detached house for sale,"Kidderminster Road, Slough, SL2",https://www.rightmove.co.uk/properties/123825680#/?channel=RES_BUY,2022-04-12,"05:05AM on August 04, 2022",SL2,4.0
@@ -2609,10 +2567,7 @@ SL6 0PQ",https://www.rightmove.co.uk/properties/122319398#/?channel=RES_BUY,2022
 575000.0,3 bedroom terraced house for sale,"Brent Terrace, Cricklewood",https://www.rightmove.co.uk/properties/122322092#/?channel=RES_BUY,2022-04-12,"05:05AM on May 04, 2022",,3.0
 500000.0,4 bedroom semi-detached house for sale,"Kidderminster Road, Slough, SL2",https://www.rightmove.co.uk/properties/96611176#/?channel=RES_BUY,2022-04-12,"05:07AM on June 01, 2022",SL2,4.0
 260000.0,2 bedroom flat for sale,"Bath Road, Taplow, Maidenhead",https://www.rightmove.co.uk/properties/120667580#/?channel=RES_BUY,2022-04-12,"05:05AM on June 08, 2022",,2.0
-365000.0,2 bedroom apartment for sale,"Huntercombe Walk,
-Taplow, 
-Buckinghamshire, 
-SL6 0PQ",https://www.rightmove.co.uk/properties/122319314#/?channel=RES_BUY,2022-04-12,"05:07AM on May 25, 2022",SL6,2.0
+365000.0,2 bedroom apartment for sale,"Huntercombe Walk,Taplow, Buckinghamshire, SL6 0PQ",https://www.rightmove.co.uk/properties/122319314#/?channel=RES_BUY,2022-04-12,"05:07AM on May 25, 2022",SL6,2.0
 337000.0,1 bedroom apartment for sale,"Braywick Road, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/122322818#/?channel=RES_BUY,2022-04-12,"05:05AM on June 07, 2022",SL6,1.0
 420000.0,2 bedroom apartment for sale,"Waterside Quarter, High Street, Maidenhead",https://www.rightmove.co.uk/properties/122302199#/?channel=RES_BUY,2022-04-12,"05:05AM on June 07, 2022",,2.0
 308160.0,1 bedroom flat for sale,"Braywick Road, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/122319617#/?channel=RES_BUY,2022-04-12,"05:05AM on June 08, 2022",SL6,1.0
@@ -2828,20 +2783,11 @@ SL6 0PQ",https://www.rightmove.co.uk/properties/122319314#/?channel=RES_BUY,2022
 410000.0,3 bedroom terraced house for sale,"Watling Avenue, Edgware",https://www.rightmove.co.uk/properties/121943477#/?channel=RES_BUY,2022-04-04,"05:06AM on June 07, 2022",,3.0
 475000.0,4 bedroom terraced house for sale,"Kenbury Drive, Cippenham, Slough",https://www.rightmove.co.uk/properties/121918742#/?channel=RES_BUY,2022-04-04,"05:05AM on August 07, 2022",,4.0
 450000.0,3 bedroom end of terrace house for sale,"Sherwood Road, Harrow, HA2",https://www.rightmove.co.uk/properties/116936417#/?channel=RES_BUY,2022-04-04,"05:05AM on August 07, 2022",HA2,3.0
-595000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/121920275#/?channel=RES_BUY,2022-04-04,"11:05PM on April 08, 2022",HA8,2.0
+595000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/121920275#/?channel=RES_BUY,2022-04-04,"11:05PM on April 08, 2022",HA8,2.0
 420000.0,2 bedroom terraced house for sale,"Pageant Avenue, London",https://www.rightmove.co.uk/properties/121828178#/?channel=RES_BUY,2022-04-04,"05:05AM on June 09, 2022",,2.0
 335000.0,2 bedroom terraced house for sale,"North Town Road, Maidenhead",https://www.rightmove.co.uk/properties/121939934#/?channel=RES_BUY,2022-04-04,"05:05AM on August 07, 2022",,2.0
-595000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/121920278#/?channel=RES_BUY,2022-04-04,"12:05AM on April 24, 2022",HA8,2.0
-430000.0,2 bedroom apartment for sale,"Watermark Maidenhead Marketing Suite, 
-St Ives Road,
-Maidenhead, 
-SL6 1SF",https://www.rightmove.co.uk/properties/121951127#/?channel=RES_BUY,2022-04-04,"05:05AM on June 01, 2022",SL6,2.0
+595000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/121920278#/?channel=RES_BUY,2022-04-04,"12:05AM on April 24, 2022",HA8,2.0
+430000.0,2 bedroom apartment for sale,"Watermark Maidenhead Marketing Suite, St Ives Road,Maidenhead, SL6 1SF",https://www.rightmove.co.uk/properties/121951127#/?channel=RES_BUY,2022-04-04,"05:05AM on June 01, 2022",SL6,2.0
 550000.0,3 bedroom terraced house for sale,"The Ridings EN4 8DR, Alverstone Avenue, East Barnet, EN4",https://www.rightmove.co.uk/properties/121919990#/?channel=RES_BUY,2022-04-04,"05:05AM on August 08, 2022",EN4,3.0
 599950.0,3 bedroom semi-detached house for sale,"Wordsworth Gardens, Borehamwood, WD6",https://www.rightmove.co.uk/properties/114486842#/?channel=RES_BUY,2022-04-04,"05:05AM on August 08, 2022",WD6,3.0
 550000.0,3 bedroom terraced house for sale,"The Ridings, Alverstone Avenue, East Barnet, EN4",https://www.rightmove.co.uk/properties/121919990#/?channel=RES_BUY,2022-04-04,"05:06AM on July 21, 2022",EN4,3.0
@@ -2863,8 +2809,7 @@ SL6 1SF",https://www.rightmove.co.uk/properties/121951127#/?channel=RES_BUY,2022
 449500.0,3 bedroom terraced house for sale,"Wentworth Crescent, Maidenhead, SL6",https://www.rightmove.co.uk/properties/96615391#/?channel=RES_BUY,2022-04-02,"05:05AM on August 07, 2022",SL6,3.0
 449500.0,3 bedroom terraced house for sale,"Wentworth Crescent, Maidenhead, Berkshire",https://www.rightmove.co.uk/properties/121882082#/?channel=RES_BUY,2022-04-02,"05:06AM on May 23, 2022",,3.0
 564000.0,3 bedroom detached house for sale,"Slough, Berkshire, SL2",https://www.rightmove.co.uk/properties/121876277#/?channel=RES_BUY,2022-04-02,"11:05PM on April 10, 2022",SL2,3.0
-295000.0,3 bedroom terraced house for sale,"37 Hivings Hill, Chesham, Buckinghamshire HP5 2PG
-",https://www.rightmove.co.uk/properties/121875743#/?channel=RES_BUY,2022-04-02,"11:05PM on April 04, 2022",HP5,3.0
+295000.0,3 bedroom terraced house for sale,"37 Hivings Hill, Chesham, Buckinghamshire HP5 2PG",https://www.rightmove.co.uk/properties/121875743#/?channel=RES_BUY,2022-04-02,"11:05PM on April 04, 2022",HP5,3.0
 560000.0,3 bedroom semi-detached house for sale,"Acorn Grove, Ruislip, Middlesex, HA4",https://www.rightmove.co.uk/properties/121855433#/?channel=RES_BUY,2022-04-01,"05:06AM on June 13, 2022",HA4,3.0
 550000.0,3 bedroom property for sale,"Watford Road, Wembley",https://www.rightmove.co.uk/properties/121849790#/?channel=RES_BUY,2022-04-01,"05:05AM on August 06, 2022",,3.0
 410000.0,3 bedroom semi-detached house for sale,COOKHAM,https://www.rightmove.co.uk/properties/121836170#/?channel=RES_BUY,2022-04-01,"11:05PM on April 03, 2022",,3.0
@@ -2882,15 +2827,10 @@ SL6 1SF",https://www.rightmove.co.uk/properties/121951127#/?channel=RES_BUY,2022
 625000.0,3 bedroom semi-detached house for sale,"Woodcote Avenue, London, NW7",https://www.rightmove.co.uk/properties/121832444#/?channel=RES_BUY,2022-04-01,"05:05AM on August 08, 2022",NW7,3.0
 340000.0,1 bedroom end of terrace house for sale,"Tintern Path, London, Greater London, NW9",https://www.rightmove.co.uk/properties/118997240#/?channel=RES_BUY,2022-04-01,"05:05AM on August 02, 2022",NW9,1.0
 475000.0,3 bedroom terraced house for sale,"Collier Close, Cippenham",https://www.rightmove.co.uk/properties/121849970#/?channel=RES_BUY,2022-04-01,"05:05AM on August 08, 2022",,3.0
-365000.0,2 bedroom apartment for sale,"Huntercombe Walk,
-Taplow, 
-Buckinghamshire, 
-SL6 0PQ",https://www.rightmove.co.uk/properties/121828091#/?channel=RES_BUY,2022-04-01,"05:07AM on May 25, 2022",SL6,2.0
+365000.0,2 bedroom apartment for sale,"Huntercombe Walk,Taplow, Buckinghamshire, SL6 0PQ",https://www.rightmove.co.uk/properties/121828091#/?channel=RES_BUY,2022-04-01,"05:07AM on May 25, 2022",SL6,2.0
 575000.0,3 bedroom terraced house for sale,"Atherton Place, Harrow",https://www.rightmove.co.uk/properties/121822457#/?channel=RES_BUY,2022-04-01,"05:05AM on May 13, 2022",,3.0
 510000.0,3 bedroom terraced house for sale,"Stafford Road, Ruislip",https://www.rightmove.co.uk/properties/121835045#/?channel=RES_BUY,2022-04-01,"05:05AM on August 08, 2022",,3.0
-452500.0,3 bedroom apartment for sale,"Clivemont Road,
-Maidenhead,
-SL6",https://www.rightmove.co.uk/properties/121826291#/?channel=RES_BUY,2022-04-01,"05:05AM on May 27, 2022",SL6,3.0
+452500.0,3 bedroom apartment for sale,"Clivemont Road,Maidenhead,SL6",https://www.rightmove.co.uk/properties/121826291#/?channel=RES_BUY,2022-04-01,"05:05AM on May 27, 2022",SL6,3.0
 375000.0,2 bedroom semi-detached house for sale,"Boyn Valley Road, Maidenhead, SL6",https://www.rightmove.co.uk/properties/121843400#/?channel=RES_BUY,2022-04-01,"05:05AM on July 22, 2022",SL6,2.0
 595000.0,2 bedroom maisonette for sale,"Clifton Gardens, London, NW11",https://www.rightmove.co.uk/properties/121812860#/?channel=RES_BUY,2022-04-01,"05:06AM on June 07, 2022",NW11,2.0
 340000.0,2 bedroom flat for sale,"Alder House, 5 Wallingford Way, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/121849547#/?channel=RES_BUY,2022-04-01,"05:05AM on June 07, 2022",SL6,2.0
@@ -2920,10 +2860,7 @@ SL6",https://www.rightmove.co.uk/properties/121826291#/?channel=RES_BUY,2022-04-
 449500.0,3 bedroom terraced house for sale,"Blumfield Crescent, Slough, SL1",https://www.rightmove.co.uk/properties/115297886#/?channel=RES_BUY,2022-03-31,"05:05AM on May 31, 2022",SL1,3.0
 475000.0,2 bedroom semi-detached house for sale,"Devonshire Gardens, Taplow, Maidenhead",https://www.rightmove.co.uk/properties/121777100#/?channel=RES_BUY,2022-03-31,"11:05PM on April 07, 2022",,2.0
 475000.0,2 bedroom apartment for sale,"Shoppenhangers Road, Maidenhead",https://www.rightmove.co.uk/properties/121812146#/?channel=RES_BUY,2022-03-31,"05:07AM on June 08, 2022",,2.0
-580000.0,2 bedroom apartment for sale,"Meadowlark House
-Moorhen Drive off Perryfield Way
-London
-NW9 7DL ",https://www.rightmove.co.uk/properties/123908084#/?channel=RES_BUY,2022-03-31,"05:06AM on June 08, 2022",NW9,2.0
+580000.0,2 bedroom apartment for sale,"Meadowlark HouseMoorhen Drive off Perryfield WayLondonNW9 7DL ",https://www.rightmove.co.uk/properties/123908084#/?channel=RES_BUY,2022-03-31,"05:06AM on June 08, 2022",NW9,2.0
 425000.0,3 bedroom semi-detached house for sale,"Conway Road, Taplow, Maidenhead",https://www.rightmove.co.uk/properties/121719584#/?channel=RES_BUY,2022-03-30,"05:07AM on June 01, 2022",,3.0
 470000.0,2 bedroom semi-detached house for sale,"Altwood Road, Maidenhead",https://www.rightmove.co.uk/properties/121244834#/?channel=RES_BUY,2022-03-30,"05:05AM on May 09, 2022",,2.0
 450000.0,4 bedroom end of terrace house for sale,"Holyport, Berkshire, SL6",https://www.rightmove.co.uk/properties/121748570#/?channel=RES_BUY,2022-03-30,"05:05AM on August 05, 2022",SL6,4.0
@@ -2971,10 +2908,7 @@ NW9 7DL ",https://www.rightmove.co.uk/properties/123908084#/?channel=RES_BUY,202
 550000.0,2 bedroom apartment for sale,"Collison Avenue, Arkley, EN5",https://www.rightmove.co.uk/properties/121674812#/?channel=RES_BUY,2022-03-29,"05:05AM on June 08, 2022",EN5,2.0
 575000.0,3 bedroom semi-detached house for sale,"Edgware, Middlesex, HA8",https://www.rightmove.co.uk/properties/121676735#/?channel=RES_BUY,2022-03-29,"05:06AM on June 14, 2022",HA8,3.0
 575000.0,3 bedroom semi-detached house for sale,"South Park Way, Ruislip, Middlesex, HA4",https://www.rightmove.co.uk/properties/121761296#/?channel=RES_BUY,2022-03-29,"11:05PM on March 30, 2022",HA4,3.0
-489950.0,2 bedroom apartment for sale,"Bourne Court,
-South Ruislip,
-Middlesex,
-HA4 6SW",https://www.rightmove.co.uk/properties/84548457#/?channel=RES_BUY,2022-03-29,"05:05AM on June 01, 2022",HA4,2.0
+489950.0,2 bedroom apartment for sale,"Bourne Court,South Ruislip,Middlesex,HA4 6SW",https://www.rightmove.co.uk/properties/84548457#/?channel=RES_BUY,2022-03-29,"05:05AM on June 01, 2022",HA4,2.0
 499950.0,3 bedroom terraced house for sale,"Warner Close, SLOUGH",https://www.rightmove.co.uk/properties/121440056#/?channel=RES_BUY,2022-03-29,"11:05PM on April 09, 2022",,3.0
 475000.0,3 bedroom semi-detached house for sale,"Lower Cippenham Lane, Cippenham, Berkshire",https://www.rightmove.co.uk/properties/121683872#/?channel=RES_BUY,2022-03-29,"05:05AM on May 24, 2022",,3.0
 340000.0,2 bedroom end of terrace house for sale,"Bader Gardens, Slough",https://www.rightmove.co.uk/properties/114185117#/?channel=RES_BUY,2022-03-29,"05:05AM on August 06, 2022",,2.0
@@ -3319,10 +3253,7 @@ HA4 6SW",https://www.rightmove.co.uk/properties/84548457#/?channel=RES_BUY,2022-
 575000.0,3 bedroom semi-detached house for sale,"Twyford Road, Harrow",https://www.rightmove.co.uk/properties/121038206#/?channel=RES_BUY,2022-03-14,"11:05PM on March 30, 2022",,3.0
 575000.0,3 bedroom terraced house for sale,"Latimer Close, Pinner, HA5",https://www.rightmove.co.uk/properties/121067279#/?channel=RES_BUY,2022-03-14,"05:05AM on April 29, 2022",HA5,3.0
 500000.0,4 bedroom town house for sale,"Bannister Close, Greenford, UB6",https://www.rightmove.co.uk/properties/121057649#/?channel=RES_BUY,2022-03-14,"05:05AM on August 06, 2022",UB6,4.0
-595000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/121047686#/?channel=RES_BUY,2022-03-14,"11:05PM on April 02, 2022",HA8,2.0
+595000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/121047686#/?channel=RES_BUY,2022-03-14,"11:05PM on April 02, 2022",HA8,2.0
 430000.0,3 bedroom semi-detached house for sale,"Charter Road, Cippenham",https://www.rightmove.co.uk/properties/121072283#/?channel=RES_BUY,2022-03-14,"05:05AM on August 07, 2022",,3.0
 550000.0,3 bedroom terraced house for sale,"Central Road, Wembley",https://www.rightmove.co.uk/properties/121041488#/?channel=RES_BUY,2022-03-14,"11:05PM on April 04, 2022",,3.0
 400000.0,2 bedroom end of terrace house for sale,"Willoners, Slough, Berkshire, SL2",https://www.rightmove.co.uk/properties/121078649#/?channel=RES_BUY,2022-03-14,"05:05AM on August 08, 2022",SL2,2.0
@@ -3335,18 +3266,12 @@ HA8 8JP
 500000.0,3 bedroom semi-detached house for sale,"Vernon Drive, Harefield",https://www.rightmove.co.uk/properties/115470782#/?channel=RES_BUY,2022-03-14,"05:05AM on August 08, 2022",,3.0
 375000.0,2 bedroom terraced house for sale,"Purssell Close, Maidenhead",https://www.rightmove.co.uk/properties/120854951#/?channel=RES_BUY,2022-03-14,"12:06AM on March 16, 2022",,2.0
 449950.0,3 bedroom semi-detached house for sale,"Cippenham Lane, Cippenham",https://www.rightmove.co.uk/properties/121056197#/?channel=RES_BUY,2022-03-14,"11:05PM on April 05, 2022",,3.0
-595000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/121047683#/?channel=RES_BUY,2022-03-14,"11:05PM on April 02, 2022",HA8,2.0
+595000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/121047683#/?channel=RES_BUY,2022-03-14,"11:05PM on April 02, 2022",HA8,2.0
 529950.0,3 bedroom detached house for sale,Wooburn Green,https://www.rightmove.co.uk/properties/121063199#/?channel=RES_BUY,2022-03-14,"11:05PM on March 29, 2022",,3.0
 450000.0,2 bedroom terraced house for sale,"Lytton Road, Barnet, EN5",https://www.rightmove.co.uk/properties/121075955#/?channel=RES_BUY,2022-03-14,"05:06AM on June 10, 2022",EN5,2.0
 450000.0,3 bedroom semi-detached house for sale,"Eastfield Road, Burnham, Slough",https://www.rightmove.co.uk/properties/107152646#/?channel=RES_BUY,2022-03-14,"12:05AM on March 25, 2022",,3.0
 315000.0,1 bedroom semi-detached house for sale,"Cedar Avenue, Ruislip, HA4",https://www.rightmove.co.uk/properties/83622213#/?channel=RES_BUY,2022-03-14,"05:05AM on August 07, 2022",HA4,1.0
-575000.0,2 bedroom house for sale,"Hartland Drive,
-Edgware,
-HA8 8JP
-",https://www.rightmove.co.uk/properties/121047695#/?channel=RES_BUY,2022-03-14,"12:05AM on March 20, 2022",HA8,2.0
+575000.0,2 bedroom house for sale,"Hartland Drive,Edgware,HA8 8JP",https://www.rightmove.co.uk/properties/121047695#/?channel=RES_BUY,2022-03-14,"12:05AM on March 20, 2022",HA8,2.0
 325000.0,2 bedroom terraced house for sale,"Osney Road, Maidenhead SL6 7UQ",https://www.rightmove.co.uk/properties/121043396#/?channel=RES_BUY,2022-03-14,"05:05AM on August 07, 2022",SL6,2.0
 450000.0,3 bedroom terraced house for sale,"Robinhood Close, Slough, SL1",https://www.rightmove.co.uk/properties/121022738#/?channel=RES_BUY,2022-03-13,"05:05AM on August 08, 2022",SL1,3.0
 575000.0,3 bedroom semi-detached house for sale,"Greenway Gardens, Colindale, NW9",https://www.rightmove.co.uk/properties/121021250#/?channel=RES_BUY,2022-03-13,"05:05AM on July 22, 2022",NW9,3.0
@@ -3678,29 +3603,19 @@ HA8 8JP
 650000.0,4 bedroom semi-detached house for sale,"Carlton Avenue, Harrow, HA3",https://www.rightmove.co.uk/properties/120336695#/?channel=RES_BUY,2022-02-24,"05:05AM on August 08, 2022",HA3,4.0
 499950.0,3 bedroom semi-detached house for sale,"Lower Road, Harrow",https://www.rightmove.co.uk/properties/124141397#/?channel=RES_BUY,2022-02-24,"05:05AM on August 08, 2022",,3.0
 400000.0,2 bedroom terraced house for sale,"Greenford Road, Harrow, Middlesex, HA1",https://www.rightmove.co.uk/properties/105655304#/?channel=RES_BUY,2022-02-24,"05:05AM on August 08, 2022",HA1,2.0
-414950.0,1 bedroom retirement property for sale,"1-46 Reedham Road,
-Burnham,
-SL1 8FD",https://www.rightmove.co.uk/properties/120336734#/?channel=RES_BUY,2022-02-24,"05:05AM on June 01, 2022",SL1,1.0
+414950.0,1 bedroom retirement property for sale,"1-46 Reedham Road,Burnham,SL1 8FD",https://www.rightmove.co.uk/properties/120336734#/?channel=RES_BUY,2022-02-24,"05:05AM on June 01, 2022",SL1,1.0
 509950.0,3 bedroom semi-detached house for sale,"Lower Road, Harrow",https://www.rightmove.co.uk/properties/120343763#/?channel=RES_BUY,2022-02-24,"05:06AM on June 21, 2022",,3.0
 595000.0,4 bedroom semi-detached house for sale,"1 Legion Place, 46 Sawyers Crescent, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/121415792#/?channel=RES_BUY,2022-02-24,"05:05AM on July 29, 2022",SL6,4.0
 525000.0,2 bedroom terraced house for sale,"Royal Crescent, Ruislip",https://www.rightmove.co.uk/properties/120314255#/?channel=RES_BUY,2022-02-24,"05:05AM on May 26, 2022",,2.0
 425000.0,2 bedroom terraced house for sale,"Beaconsfield Road, Slough, SL2",https://www.rightmove.co.uk/properties/119058041#/?channel=RES_BUY,2022-02-24,"05:05AM on August 08, 2022",SL2,2.0
 420000.0,2 bedroom apartment for sale,"Waterside Quarter, High Street, Maidenhead",https://www.rightmove.co.uk/properties/122718824#/?channel=RES_BUY,2022-02-24,"05:05AM on June 07, 2022",,2.0
-515000.0,3 bedroom maisonette for sale,"Station Approach, 
-South Oxhey, 
-WD19 7DT",https://www.rightmove.co.uk/properties/84103035#/?channel=RES_BUY,2022-02-24,"05:06AM on June 07, 2022",WD19,3.0
+515000.0,3 bedroom maisonette for sale,"Station Approach, South Oxhey, WD19 7DT",https://www.rightmove.co.uk/properties/84103035#/?channel=RES_BUY,2022-02-24,"05:06AM on June 07, 2022",WD19,3.0
 475000.0,3 bedroom semi-detached house for sale,"Prestwick Road, Watford, WD19",https://www.rightmove.co.uk/properties/120319103#/?channel=RES_BUY,2022-02-24,"05:05AM on July 29, 2022",WD19,3.0
-392950.0,1 bedroom retirement property for sale,"1-46 Reedham Road,
-Burnham,
-SL1 8FD",https://www.rightmove.co.uk/properties/120336497#/?channel=RES_BUY,2022-02-24,"05:05AM on June 08, 2022",SL1,1.0
+392950.0,1 bedroom retirement property for sale,"1-46 Reedham Road,Burnham,SL1 8FD",https://www.rightmove.co.uk/properties/120336497#/?channel=RES_BUY,2022-02-24,"05:05AM on June 08, 2022",SL1,1.0
 595000.0,4 bedroom semi-detached house for sale,"2 Legion Place, 46 Sawyers Crescent, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/120360176#/?channel=RES_BUY,2022-02-24,"12:05AM on March 19, 2022",SL6,4.0
 435000.0,2 bedroom apartment for sale,"Court Road, Maidenhead",https://www.rightmove.co.uk/properties/120326099#/?channel=RES_BUY,2022-02-24,"05:05AM on June 01, 2022",,2.0
-548950.0,2 bedroom retirement property for sale,"1-46 Reedham Road,
-Burnham,
-SL1 8FD",https://www.rightmove.co.uk/properties/120336683#/?channel=RES_BUY,2022-02-24,"05:05AM on June 01, 2022",SL1,2.0
-561950.0,2 bedroom retirement property for sale,"1-46 Reedham Road,
-Burnham,
-SL1 8FD",https://www.rightmove.co.uk/properties/120336623#/?channel=RES_BUY,2022-02-24,"05:06AM on June 08, 2022",SL1,2.0
+548950.0,2 bedroom retirement property for sale,"1-46 Reedham Road,Burnham,SL1 8FD",https://www.rightmove.co.uk/properties/120336683#/?channel=RES_BUY,2022-02-24,"05:05AM on June 01, 2022",SL1,2.0
+561950.0,2 bedroom retirement property for sale,"1-46 Reedham Road,Burnham,SL1 8FD",https://www.rightmove.co.uk/properties/120336623#/?channel=RES_BUY,2022-02-24,"05:06AM on June 08, 2022",SL1,2.0
 525000.0,3 bedroom semi-detached bungalow for sale,"Islip Gardens, Northolt",https://www.rightmove.co.uk/properties/84017139#/?channel=RES_BUY,2022-02-23,"05:06AM on June 01, 2022",,3.0
 425000.0,2 bedroom apartment for sale,"Bovis House, Northolt Road, Harrow, HA2",https://www.rightmove.co.uk/properties/84076815#/?channel=RES_BUY,2022-02-23,"05:05AM on June 01, 2022",HA2,2.0
 395000.0,2 bedroom semi-detached bungalow for sale,"Cameron Road, Chesham",https://www.rightmove.co.uk/properties/120292421#/?channel=RES_BUY,2022-02-23,"05:05AM on June 07, 2022",,2.0
@@ -4009,10 +3924,7 @@ SL1 8FD",https://www.rightmove.co.uk/properties/120336623#/?channel=RES_BUY,2022
 475000.0,3 bedroom end of terrace house for sale,"Switchback Road North, Maidenhead, SL6",https://www.rightmove.co.uk/properties/119705210#/?channel=RES_BUY,2022-02-08,"05:05AM on July 14, 2022",SL6,3.0
 600000.0,3 bedroom end of terrace house for sale,"Fernbank Avenue, Wembley, Middlesex, HA0",https://www.rightmove.co.uk/properties/119292710#/?channel=RES_BUY,2022-02-08,"05:05AM on August 08, 2022",HA0,3.0
 475000.0,2 bedroom end of terrace house for sale,"Marygold Walk, Amersham, HP6",https://www.rightmove.co.uk/properties/119712920#/?channel=RES_BUY,2022-02-08,"05:05AM on August 08, 2022",HP6,2.0
-420000.0,2 bedroom apartment for sale,"Watermark Maidenhead Marketing Suite, 
-St Ives Road,
-Maidenhead, 
-SL6 1SF",https://www.rightmove.co.uk/properties/83791143#/?channel=RES_BUY,2022-02-08,"05:05AM on June 01, 2022",SL6,2.0
+420000.0,2 bedroom apartment for sale,"Watermark Maidenhead Marketing Suite, St Ives Road,Maidenhead, SL6 1SF",https://www.rightmove.co.uk/properties/83791143#/?channel=RES_BUY,2022-02-08,"05:05AM on June 01, 2022",SL6,2.0
 575000.0,3 bedroom semi-detached house for sale,"Morecambe Gardens, Stanmore, HA7",https://www.rightmove.co.uk/properties/120102389#/?channel=RES_BUY,2022-02-08,"05:05AM on August 08, 2022",HA7,3.0
 475000.0,2 bedroom end of terrace house for sale,"Marygold Walk, Amersham, Bucks, HP6",https://www.rightmove.co.uk/properties/119712920#/?channel=RES_BUY,2022-02-08,"12:05AM on February 22, 2022",HP6,2.0
 450000.0,3 bedroom end of terrace house for sale,"Copinger Walk, Edgware, Middlesex HA8",https://www.rightmove.co.uk/properties/119686616#/?channel=RES_BUY,2022-02-08,"05:05AM on August 08, 2022",HA8,3.0
@@ -4401,17 +4313,13 @@ SL6 1SF",https://www.rightmove.co.uk/properties/83791143#/?channel=RES_BUY,2022-
 475000.0,4 bedroom terraced house for sale,"Windermere Way, Slough",https://www.rightmove.co.uk/properties/118801184#/?channel=RES_BUY,2022-01-17,"11:55PM on January 24, 2022",,4.0
 365000.0,3 bedroom end of terrace house for sale,"Parkview Chase, Burnham",https://www.rightmove.co.uk/properties/118805306#/?channel=RES_BUY,2022-01-17,"05:05AM on August 07, 2022",,3.0
 359950.0,2 bedroom terraced house for sale,"Two Mile Drive, Slough, SL1",https://www.rightmove.co.uk/properties/118826675#/?channel=RES_BUY,2022-01-17,"11:55PM on February 14, 2022",SL1,2.0
-349950.0,1 bedroom retirement property for sale,"1-46 Reedham Road,
-Burnham,
-SL1 8FD",https://www.rightmove.co.uk/properties/118813349#/?channel=RES_BUY,2022-01-17,"05:05AM on June 08, 2022",SL1,1.0
+349950.0,1 bedroom retirement property for sale,"1-46 Reedham Road,Burnham,SL1 8FD",https://www.rightmove.co.uk/properties/118813349#/?channel=RES_BUY,2022-01-17,"05:05AM on June 08, 2022",SL1,1.0
 475000.0,4 bedroom semi-detached house for sale,"Windermere Way, Slough",https://www.rightmove.co.uk/properties/118801184#/?channel=RES_BUY,2022-01-17,"11:55PM on January 18, 2022",,4.0
 375000.0,3 bedroom terraced house for sale,"Halifax Road, Maidenhead",https://www.rightmove.co.uk/properties/118810595#/?channel=RES_BUY,2022-01-17,"05:05AM on May 31, 2022",,3.0
 525000.0,2 bedroom end of terrace house for sale,"Finchley, London, N3",https://www.rightmove.co.uk/properties/121631972#/?channel=RES_BUY,2022-01-17,"11:05PM on April 10, 2022",N3,2.0
 350000.0,2 bedroom terraced house for sale,"Sunderland Road, Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/118816985#/?channel=RES_BUY,2022-01-17,"05:05AM on June 12, 2022",SL6,2.0
 450000.0,2 bedroom house for sale,"Stanley Road, South Harrow, Harrow, HA2",https://www.rightmove.co.uk/properties/118833572#/?channel=RES_BUY,2022-01-17,"11:05PM on March 28, 2022",HA2,2.0
-499950.0,2 bedroom retirement property for sale,"1-46 Reedham Road,
-Burnham,
-SL1 8FD",https://www.rightmove.co.uk/properties/118817855#/?channel=RES_BUY,2022-01-17,"05:07AM on June 07, 2022",SL1,2.0
+499950.0,2 bedroom retirement property for sale,"1-46 Reedham Road,Burnham,SL1 8FD",https://www.rightmove.co.uk/properties/118817855#/?channel=RES_BUY,2022-01-17,"05:07AM on June 07, 2022",SL1,2.0
 525000.0,2 bedroom end of terrace house for sale,"College Terrace, Finchley, N3",https://www.rightmove.co.uk/properties/122364515#/?channel=RES_BUY,2022-01-17,"08:38AM on April 22, 2022",N3,2.0
 400000.0,3 bedroom semi-detached house for sale,"Salisbury Avenue, Slough",https://www.rightmove.co.uk/properties/118827557#/?channel=RES_BUY,2022-01-17,"12:05AM on April 26, 2022",,3.0
 330000.0,2 bedroom semi-detached house for sale,"North Town Road, Maidenhead",https://www.rightmove.co.uk/properties/112412801#/?channel=RES_BUY,2022-01-17,"12:05AM on March 01, 2022",,2.0
@@ -4641,9 +4549,7 @@ SL1 8FD",https://www.rightmove.co.uk/properties/118817855#/?channel=RES_BUY,2022
 575000.0,3 bedroom semi-detached house for sale,"Fort Road, Northolt",https://www.rightmove.co.uk/properties/117860045#/?channel=RES_BUY,2021-12-21,"05:05AM on August 08, 2022",,3.0
 475000.0,3 bedroom end of terrace house for sale,"Swan Lane, Whetstone, N20",https://www.rightmove.co.uk/properties/117856127#/?channel=RES_BUY,2021-12-21,"11:05PM on March 28, 2022",N20,3.0
 500000.0,2 bedroom terraced house for sale,"Brunswick Grove, New Southgate, London, N11",https://www.rightmove.co.uk/properties/121210907#/?channel=RES_BUY,2021-12-21,"02:01PM on March 18, 2022",N11,2.0
-250000.0,3 bedroom town house for sale,"Burnham Court,
-Burnham,
-SL1 7LP",https://www.rightmove.co.uk/properties/117827834#/?channel=RES_BUY,2021-12-20,"11:55PM on January 09, 2022",SL1,3.0
+250000.0,3 bedroom town house for sale,"Burnham Court,Burnham,SL1 7LP",https://www.rightmove.co.uk/properties/117827834#/?channel=RES_BUY,2021-12-20,"11:55PM on January 09, 2022",SL1,3.0
 550000.0,4 bedroom semi-detached house for sale,"Iona Crescent, Cippenham, Slough",https://www.rightmove.co.uk/properties/108630959#/?channel=RES_BUY,2021-12-20,"05:07AM on June 22, 2022",,4.0
 550000.0,3 bedroom terraced house for sale,"Byron Road, Harrow, HA1",https://www.rightmove.co.uk/properties/117833501#/?channel=RES_BUY,2021-12-20,"05:06AM on June 22, 2022",HA1,3.0
 425000.0,2 bedroom apartment for sale,"Taplow, Maidenhead",https://www.rightmove.co.uk/properties/117814367#/?channel=RES_BUY,2021-12-20,"05:07AM on June 07, 2022",,2.0
@@ -5285,10 +5191,7 @@ SL1 7LP",https://www.rightmove.co.uk/properties/117827834#/?channel=RES_BUY,2021
 550000.0,2 bedroom semi-detached house for sale,"Honiton Gardens, Mill Hill, NW7",https://www.rightmove.co.uk/properties/114419321#/?channel=RES_BUY,2021-10-05,"05:06AM on June 19, 2022",NW7,2.0
 470000.0,3 bedroom end of terrace house for sale,"Cowper Road, Slough, SL2",https://www.rightmove.co.uk/properties/114400841#/?channel=RES_BUY,2021-10-05,"05:05AM on June 17, 2022",SL2,3.0
 550000.0,2 bedroom apartment for sale,"Flat ,  Kingsway, London",https://www.rightmove.co.uk/properties/81939477#/?channel=RES_BUY,2021-10-05,"05:05AM on June 01, 2022",,2.0
-590000.0,2 bedroom apartment for sale,"Henry Darlot Drive,
-Mill Hill,
-London,
-NW7",https://www.rightmove.co.uk/properties/84577443#/?channel=RES_BUY,2021-10-05,"05:06AM on June 07, 2022",NW7,2.0
+590000.0,2 bedroom apartment for sale,"Henry Darlot Drive,Mill Hill,London,NW7",https://www.rightmove.co.uk/properties/84577443#/?channel=RES_BUY,2021-10-05,"05:06AM on June 07, 2022",NW7,2.0
 399950.0,2 bedroom terraced house for sale,"Tylsworth Close, Amersham, Bucks HP6",https://www.rightmove.co.uk/properties/81950241#/?channel=RES_BUY,2021-10-05,"11:55PM on January 18, 2022",HP6,2.0
 420000.0,3 bedroom terraced house for sale,"The Terrace, Knowl Hill, Reading, RG10",https://www.rightmove.co.uk/properties/114402413#/?channel=RES_BUY,2021-10-05,"11:55PM on February 06, 2022",RG10,3.0
 450000.0,4 bedroom terraced house for sale,"Maidenhead, Berkshire, SL6",https://www.rightmove.co.uk/properties/107334176#/?channel=RES_BUY,2021-10-05,"11:55PM on January 25, 2022",SL6,4.0
