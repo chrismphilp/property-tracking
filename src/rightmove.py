@@ -81,7 +81,10 @@ class RightmovePropertiesForSale:
 
         # Extract number of bedrooms from `type` to a separate column:
         no_of_bedroom_regex = r"\b([\d][\d]?)\b"
-        results["number_bedrooms"] = results["type"].astype(str).str.extract(no_of_bedroom_regex, expand=True)
+        no_of_bedrooms = results["type"].astype(str).str.extract(no_of_bedroom_regex, expand=True)
+        if no_of_bedrooms is None:
+            no_of_bedrooms = 1.0
+        results["number_bedrooms"] = no_of_bedrooms
         results.loc[results["type"].str.contains("studio", case=False), "number_bedrooms"] = 0
         results["number_bedrooms"] = pd.to_numeric(results["number_bedrooms"])
 
