@@ -90,7 +90,7 @@ def main():
 def process_csv(repo, new_properties, path, commit_message, yesterday):
     repo_csv = repo.get_contents(path)
     csv = pd.concat([
-        pd.read_csv(repo_csv.content, encoding='utf-8', encoding_errors='replace', error_bad_lines=False),
+        pd.read_csv(io.StringIO(repo_csv.content), sep=',', encoding='utf-8', encoding_errors='replace'),
         new_properties
     ])
 
