@@ -88,7 +88,7 @@ def main():
 
 def process_csv(repo, new_properties, path, commit_message, yesterday):
     repo_csv = repo.get_contents(path)
-    csv = pd.concat([pd.read_csv(BytesIO(repo_csv.decoded_content)), new_properties])
+    csv = pd.concat([pd.read_csv(BytesIO(repo_csv.decoded_content), encoding='utf-8', encoding_errors='replace'), new_properties])
 
     csv['added_on'] = pd.to_datetime(csv['added_on'], dayfirst=True)
     csv = csv.sort_values("added_on", ascending=False)
@@ -97,7 +97,7 @@ def process_csv(repo, new_properties, path, commit_message, yesterday):
     csv = csv.drop_duplicates(subset=csv.columns.difference(["search_datetime", "added_on"]), keep="first")
     yesterdays_properties = csv.loc[csv["added_on"] == yesterday]
 
-    csv_format = csv.to_csv(index=False)
+    csv_format = csv.to_csv(index=False, encoding='utf-8')
 
     repo.update_file(path=path, message=commit_message, content=bytes(csv_format, encoding='utf-8'), sha=repo_csv.sha)
 
