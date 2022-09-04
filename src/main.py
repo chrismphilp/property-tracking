@@ -89,7 +89,10 @@ def main():
 
 def process_csv(repo, new_properties, path, commit_message, yesterday):
     repo_csv = repo.get_contents(path)
-    csv = pd.concat([pd.read_csv(repo_csv, encoding=repo_csv.encoding, encoding_errors='replace', error_bad_lines=False), new_properties])
+    csv = pd.concat([
+        pd.read_csv(repo_csv.content, encoding=repo_csv.encoding, encoding_errors='replace', error_bad_lines=False),
+        new_properties
+    ])
 
     csv['added_on'] = pd.to_datetime(csv['added_on'], dayfirst=True)
     csv = csv.sort_values("added_on", ascending=False)
