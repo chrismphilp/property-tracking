@@ -1,3 +1,5 @@
+import base64
+import io
 import os
 
 import pytz
@@ -87,9 +89,10 @@ def main():
 
 def process_csv(repo, new_properties, path, commit_message, yesterday):
     repo_csv = repo.get_contents(path)
-    blob_csv = repo.get_git_blob(repo_csv.sha)
+    encoded_blob_csv = repo.get_git_blob(repo_csv.sha)
+    decoded_blob_csv = base64.b64decode(encoded_blob_csv.content).decode('utf-8')
     csv = pd.concat([
-        pd.read_csv(blob_csv.content, encoding=blob_csv.encoding, encoding_errors='replace'),
+        pd.read_csv(io.StringIO(decoded_blob_csv), encoding_errors='replace'),
         new_properties
     ])
 
