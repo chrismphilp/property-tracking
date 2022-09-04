@@ -1,5 +1,3 @@
-import base64
-import io
 import os
 
 import pytz
@@ -12,7 +10,6 @@ from rightmove import RightmovePropertiesForSale
 from zoopla import ZooplaPropertiesForSale
 from email_handler import EmailSender
 
-from io import BytesIO
 from flask import Flask
 from google.cloud import secretmanager
 from github import Github
