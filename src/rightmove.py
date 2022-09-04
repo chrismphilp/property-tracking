@@ -123,6 +123,8 @@ class RightmovePropertiesForSale:
 
         # Create data lists from xpaths:
         price = tree.xpath(xp_prices)
+        if price is None:
+            price = '0'
         titles = tree.xpath(xp_titles)
         addresses = tree.xpath(xp_addresses)
         weblinks = [f"{base}{tree.xpath(xp_weblinks)[w]}" for w in range(len(tree.xpath(xp_weblinks)))]
