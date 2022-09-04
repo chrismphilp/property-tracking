@@ -92,7 +92,7 @@ def process_csv(repo, new_properties, path, commit_message, yesterday):
     repo_csv = repo.get_contents(path)
     blob_csv = repo.get_git_blob(repo_csv.sha)
     csv = pd.concat([
-        pd.read_csv(blob_csv, encoding=blob_csv.encoding, encoding_errors='replace'),
+        pd.read_csv(blob_csv.content, encoding=blob_csv.encoding, encoding_errors='replace'),
         new_properties
     ])
 
