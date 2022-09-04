@@ -142,5 +142,6 @@ class ZooplaPropertiesForSale:
         xpath = """//main[@data-testid="search-content"]
         //p[@data-testid="total-results"]/text()"""
         pattern = re.compile(r"""[0-9]+""", re.VERBOSE)
-        pages = pattern.findall(str(tree.xpath(xpath)))[0]
-        return math.ceil(int(pages) / self.page_size)
+        pages = pattern.findall(str(tree.xpath(xpath)))
+        no_of_pages = (pages or [0])[0]
+        return math.ceil(int(no_of_pages) / self.page_size)
