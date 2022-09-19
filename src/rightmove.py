@@ -77,7 +77,7 @@ class RightmovePropertiesForSale:
         # Extract postcodes to a separate column:
         postcode_regex = r"\b([A-Za-z][A-Za-z]?[0-9][0-9]?[A-Za-z]?)\b"
         results["address"] = results["address"].astype(str)
-        results["postcode"] = results["address"].astype(str).str.extract(postcode_regex, expand=True)
+        results["postcode"] = results["address"].str.extract(postcode_regex, expand=True)
 
         # Extract number of bedrooms from `type` to a separate column:
         no_of_bedroom_regex = r"\b([\d][\d]?)\b"
@@ -92,12 +92,12 @@ class RightmovePropertiesForSale:
         date_added_regex = r"\b([0-9]{1,2}\/[0-9]{1,2}\/[0-9]{1,4})\b"
         today = dt.datetime.now().strftime("%d/%m/%Y")
         yesterday = (dt.datetime.today() - dt.timedelta(days=1)).strftime("%d/%m/%Y")
-        results["added_on"] = results["added_on"].str.replace('today', today)
-        results["added_on"] = results["added_on"].str.replace('yesterday', yesterday)
+        results["added_on"] = results["added_on"].astype(str).str.replace('today', today)
+        results["added_on"] = results["added_on"].astype(str).str.replace('yesterday', yesterday)
         results["added_on"] = results["added_on"].astype(str).str.extract(date_added_regex, expand=True)
 
         # Clean up annoying white spaces and newlines in `type` column:
-        results["type"] = results["type"].str.strip("\n").str.strip()
+        results["type"] = results["type"].astype(str).str.strip("\n").str.strip()
 
         results["search_datetime"] = results["search_datetime"].astype('str')
 
