@@ -1,5 +1,22 @@
 # Property-Tracking
 
+## Running Locally
+
+### Prerequisites:
+
+The following `.env` file will need to created.
+
+```
+REPOSITORY=
+ENVIRONMENT=
+GITHUB_ACCESS_TOKEN=
+SENDGRID_API_KEY=
+FROM_EMAIL=
+TO_EMAIL=
+```
+
+## GCloud Deployment
+
 This application is deployed to `Google App Engine`, and is used to track property prices in certain areas within London for future reference. This can be deployed for **free** based
 on the current gcloud pricing structure, and the locations can be set to any areas that either `Zoopla` or `Rightmove` currently accept.
 
@@ -8,7 +25,6 @@ files within the repository.
 
 Feel free to fork this for your own purposes.
 
-## Personal Setup
 
 ### Prerequisites:
 
