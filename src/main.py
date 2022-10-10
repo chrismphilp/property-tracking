@@ -3,6 +3,8 @@ import io
 import os
 
 import pytz
+import atexit
+
 import datetime as dt
 import pandas as pd
 
@@ -13,6 +15,7 @@ from email_handler import EmailSender
 from dotenv import load_dotenv
 from flask import Flask
 from github import Github
+from apscheduler.schedulers.background import BackgroundScheduler
 
 # [START gae_python39_warmup_app]
 # [START gae_python3_warmup_app]
@@ -39,19 +42,14 @@ if ENVIRONMENT == 'gcloud':
 else:
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", "GITHUB_ACCESS_TOKEN environment variable is not set.")
 
+scheduler = BackgroundScheduler()
+atexit.register(lambda: scheduler.shutdown())
 
-print(ENVIRONMENT)
-print(REPOSITORY)
-print(GITHUB_ACCESS_TOKEN)
-
-
-# GitHub
 g = Github(GITHUB_ACCESS_TOKEN)
 
 
 @app.route('/')
 def main():
-
     repo = g.get_user().get_repo(REPOSITORY)
 
     london_tzinfo = pytz.timezone("Europe/London")
@@ -138,3 +136,7 @@ if __name__ == '__main__':
 
 # [END gae_python3_warmup_app]
 # [END gae_python39_warmup_app]
+
+if ENVIRONMENT == 'gcloud':
+    scheduler.add_job(func=main, trigger='cron', hour=5, minute=55)
+    scheduler.start()
