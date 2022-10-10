@@ -15,6 +15,12 @@ FROM_EMAIL=
 TO_EMAIL=
 ```
 
+Then the following command can be ran:
+
+```
+python src/main.py
+```
+
 ## GCloud Deployment
 
 This application is deployed to `Google App Engine`, and is used to track property prices in certain areas within London for future reference. This can be deployed for **free** based

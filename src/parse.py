@@ -6,7 +6,7 @@ import pytz
 class Parser:
 
     @staticmethod
-    def create_data_frame(data: [str]):
+    def create_data_frame(data: list[str]):
         columns = ["price", "type", "address", "url", "added_on"]
 
         temp_df = pd.DataFrame(data)
