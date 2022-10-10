@@ -1,19 +1,31 @@
 import logging
-import google.auth
+import os
 
+from dotenv import load_dotenv
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Email, To
 from python_http_client.exceptions import HTTPError
-from google.cloud import secretmanager
 
-secrets = secretmanager.SecretManagerServiceClient()
-_, project_id = google.auth.default()
+load_dotenv()
+ENVIRONMENT = os.environ.get("ENVIRONMENT", "ENVIRONMENT environment variable is not set.")
+
+if (ENVIRONMENT == 'gcloud'):
+    import google.auth
+    from google.cloud import secretmanager
+
+    secrets = secretmanager.SecretManagerServiceClient()
+    _, project_id = google.auth.default()    
+    SENDGRID_API_KEY = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/sendgrid-api-key/versions/latest"}).payload.data.decode("utf-8")
+    FROM_EMAIL = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/from-email/versions/latest"}).payload.data.decode("utf-8")
+    TO_EMAIL = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/to-email/versions/latest"}).payload.data.decode("utf-8")
+else:
+    SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY", "SENDGRID_API_KEY environment variable is not set.")
+    FROM_EMAIL = os.environ.get("FROM_EMAIL", "FROM_EMAIL environment variable is not set.")
+    TO_EMAIL = os.environ.get("TO_EMAIL", "TO_EMAIL environment variable is not set.")
 
 
 class EmailSender:
-    sendgrid_api_key = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/sendgrid-api-key/versions/latest"}).payload.data.decode("utf-8")
-    from_email = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/from-email/versions/latest"}).payload.data.decode("utf-8")
-    to_email = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/to-email/versions/latest"}).payload.data.decode("utf-8")
+
 
     def __init__(self, dataframe):
         self.dataframe = dataframe
@@ -64,17 +76,17 @@ class EmailSender:
 
         return Mail(
             to_emails=self.generate_recipients(),
-            from_email=Email(self.from_email, "Christopher Philp"),
+            from_email=Email(FROM_EMAIL, "Christopher Philp"),
             subject=subject,
             html_content=message_text,
         )
 
     def generate_recipients(self):
         recipients = []
-        for email in str(self.to_email).split(","):
+        for email in str(TO_EMAIL).split(","):
             recipients.append(To(email))
         return recipients
 
     def authenticate(self):
         logging.info(f"Authenticating user")
-        return SendGridAPIClient(self.sendgrid_api_key)
+        return SendGridAPIClient(SENDGRID_API_KEY)

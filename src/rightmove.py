@@ -21,7 +21,7 @@ class RightmovePropertiesForSale:
                  min_price: int = 375_000,
                  max_price: int = 650_000,
                  radius_from_location: float = 0,
-                 property_type: [str] = 'houses',
+                 property_type: list[str] = 'houses',
                  include_sstc: bool = True):
         self.parser = Parser()
         self.base_url = 'https://www.rightmove.co.uk/property-for-sale/find.html'

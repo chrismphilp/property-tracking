@@ -22,7 +22,7 @@ class ZooplaPropertiesForSale:
                  max_price: int = 650_000,
                  page_size: int = 25,
                  radius_from_location: int = 0,
-                 property_type: [str] = 'houses',
+                 property_type: list[str] = 'houses',
                  include_sstc: bool = False, ):
         self.parser = Parser()
         self.base_url = 'https://www.zoopla.co.uk/for-sale'
