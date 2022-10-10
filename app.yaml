@@ -9,3 +9,4 @@ instance_class: B4
 
 env_variables:
   REPOSITORY: property-tracking
+  ENVIRONMENT: gcloud

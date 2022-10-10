@@ -9,20 +9,17 @@ import pandas as pd
 
 from lxml import html
 from parse import Parser
-from fake_useragent import UserAgent
-
-ua = UserAgent()
 
 
 class ZooplaPropertiesForSale:
-    headers = {'User-Agent': ua.random, 'Accept-Language': 'en-gb', 'Referer': 'https://www.google.com/'}
+    headers = {'User-Agent': 'Google', 'Accept-Language': 'en-gb', 'Referer': 'https://www.google.com/'}
 
     def __init__(self, location_identifier: str,
                  min_price: int = 375_000,
                  max_price: int = 650_000,
                  page_size: int = 25,
                  radius_from_location: int = 0,
-                 property_type: [str] = 'houses',
+                 property_type: list[str] = 'houses',
                  include_sstc: bool = False, ):
         self.parser = Parser()
         self.base_url = 'https://www.zoopla.co.uk/for-sale'

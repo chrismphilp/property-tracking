@@ -3,42 +3,54 @@ import io
 import os
 
 import pytz
+import atexit
+
 import datetime as dt
 import pandas as pd
-import google.cloud.logging
-import google.auth
 
 from rightmove import RightmovePropertiesForSale
 from zoopla import ZooplaPropertiesForSale
 from email_handler import EmailSender
 
+from dotenv import load_dotenv
 from flask import Flask
-from google.cloud import secretmanager
 from github import Github
+from apscheduler.schedulers.background import BackgroundScheduler
 
 # [START gae_python39_warmup_app]
 # [START gae_python3_warmup_app]
 
+load_dotenv()
 app = Flask(__name__)
 
-repository_name = os.environ.get("REPOSITORY", "REPOSITORY environment variable is not set.")
+ENVIRONMENT = os.environ.get("ENVIRONMENT", "ENVIRONMENT environment variable is not set.")
+REPOSITORY = os.environ.get("REPOSITORY", "REPOSITORY environment variable is not set.")
 
-# Logging
-client = google.cloud.logging.Client()
-client.setup_logging()
+if ENVIRONMENT == 'gcloud':
+    import google.cloud.logging
+    import google.auth
+    from google.cloud import secretmanager
 
-# Secrets
-secrets = secretmanager.SecretManagerServiceClient()
-_, project_id = google.auth.default()
-GITHUB_ACCESS_TOKEN = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/github-access-token/versions/latest"}).payload.data.decode("utf-8")
+    # Logging
+    client = google.cloud.logging.Client()
+    client.setup_logging()
 
-# GitHub
+    # Secrets
+    secrets = secretmanager.SecretManagerServiceClient()
+    _, project_id = google.auth.default()
+    GITHUB_ACCESS_TOKEN = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/github-access-token/versions/latest"}).payload.data.decode("utf-8")
+else:
+    GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", "GITHUB_ACCESS_TOKEN environment variable is not set.")
+
+scheduler = BackgroundScheduler()
+atexit.register(lambda: scheduler.shutdown())
+
 g = Github(GITHUB_ACCESS_TOKEN)
 
 
 @app.route('/')
 def main():
-    repo = g.get_user().get_repo(repository_name)
+    repo = g.get_user().get_repo(REPOSITORY)
 
     london_tzinfo = pytz.timezone("Europe/London")
     yesterday = (dt.datetime.now(dt.timezone.utc).astimezone(london_tzinfo) - dt.timedelta(days=1)).strftime("%Y-%m-%d")
@@ -124,3 +136,7 @@ if __name__ == '__main__':
 
 # [END gae_python3_warmup_app]
 # [END gae_python39_warmup_app]
+
+if ENVIRONMENT == 'gcloud':
+    scheduler.add_job(func=main, trigger='cron', hour=5, minute=55)
+    scheduler.start()
