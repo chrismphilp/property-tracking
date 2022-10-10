@@ -9,13 +9,10 @@ import pandas as pd
 
 from lxml import html
 from parse import Parser
-from fake_useragent import UserAgent
-
-ua = UserAgent()
 
 
 class ZooplaPropertiesForSale:
-    headers = {'User-Agent': ua.random, 'Accept-Language': 'en-gb', 'Referer': 'https://www.google.com/'}
+    headers = {'User-Agent': 'Google', 'Accept-Language': 'en-gb', 'Referer': 'https://www.google.com/'}
 
     def __init__(self, location_identifier: str,
                  min_price: int = 375_000,

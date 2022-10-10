@@ -23,7 +23,7 @@ app = Flask(__name__)
 ENVIRONMENT = os.environ.get("ENVIRONMENT", "ENVIRONMENT environment variable is not set.")
 REPOSITORY = os.environ.get("REPOSITORY", "REPOSITORY environment variable is not set.")
 
-if (ENVIRONMENT == 'gcloud'):
+if ENVIRONMENT == 'gcloud':
     import google.cloud.logging
     import google.auth
     from google.cloud import secretmanager

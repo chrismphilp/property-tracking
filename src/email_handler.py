@@ -9,12 +9,12 @@ from python_http_client.exceptions import HTTPError
 load_dotenv()
 ENVIRONMENT = os.environ.get("ENVIRONMENT", "ENVIRONMENT environment variable is not set.")
 
-if (ENVIRONMENT == 'gcloud'):
+if ENVIRONMENT == 'gcloud':
     import google.auth
     from google.cloud import secretmanager
 
     secrets = secretmanager.SecretManagerServiceClient()
-    _, project_id = google.auth.default()    
+    _, project_id = google.auth.default()
     SENDGRID_API_KEY = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/sendgrid-api-key/versions/latest"}).payload.data.decode("utf-8")
     FROM_EMAIL = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/from-email/versions/latest"}).payload.data.decode("utf-8")
     TO_EMAIL = secrets.access_secret_version(request={"name": f"projects/{project_id}/secrets/to-email/versions/latest"}).payload.data.decode("utf-8")
@@ -25,7 +25,6 @@ else:
 
 
 class EmailSender:
-
 
     def __init__(self, dataframe):
         self.dataframe = dataframe
@@ -81,12 +80,14 @@ class EmailSender:
             html_content=message_text,
         )
 
-    def generate_recipients(self):
+    @staticmethod
+    def generate_recipients():
         recipients = []
         for email in str(TO_EMAIL).split(","):
             recipients.append(To(email))
         return recipients
 
-    def authenticate(self):
+    @staticmethod
+    def authenticate():
         logging.info(f"Authenticating user")
         return SendGridAPIClient(SENDGRID_API_KEY)
