@@ -137,6 +137,6 @@ if __name__ == '__main__':
 # [END gae_python3_warmup_app]
 # [END gae_python39_warmup_app]
 
-if ENVIRONMENT == 'gcloud':
+if ENVIRONMENT == 'local':
     scheduler.add_job(func=main, trigger='cron', hour=5, minute=55)
     scheduler.start()
