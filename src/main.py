@@ -122,7 +122,7 @@ def process_csv(repo, new_properties, path, commit_message, yesterday):
     return yesterdays_properties
 
 if ENVIRONMENT == 'local':
-    print('Here')
+    print('Starting scheduler for nightly processing')
     scheduler.add_job(func=main, trigger='cron', hour=5, minute=55)
     scheduler.start()
 
