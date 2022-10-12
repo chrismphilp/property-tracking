@@ -121,6 +121,10 @@ def process_csv(repo, new_properties, path, commit_message, yesterday):
 
     return yesterdays_properties
 
+if ENVIRONMENT == 'local':
+    print('Here')
+    scheduler.add_job(func=main, trigger='cron', hour=5, minute=55)
+    scheduler.start()
 
 @app.route('/_ah/warmup')
 def warmup():
@@ -136,7 +140,3 @@ if __name__ == '__main__':
 
 # [END gae_python3_warmup_app]
 # [END gae_python39_warmup_app]
-
-if ENVIRONMENT == 'local':
-    scheduler.add_job(func=main, trigger='cron', hour=5, minute=55)
-    scheduler.start()
